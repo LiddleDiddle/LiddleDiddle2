@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bengine", "Bengine\Bengine.vcxproj", "{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MagicalTower", "MagicalTower\MagicalTower.vcxproj", "{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF} = {E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
