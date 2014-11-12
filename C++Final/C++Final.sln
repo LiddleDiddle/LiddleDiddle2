@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bengine", "Bengine\Bengine.vcxproj", "{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MagicalTower", "MagicalTower\MagicalTower.vcxproj", "{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}.Debug|Win32.Build.0 = Debug|Win32
+		{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}.Release|Win32.ActiveCfg = Release|Win32
+		{E24C1123-2D9E-4F00-ABAB-94C0FFCC26FF}.Release|Win32.Build.0 = Release|Win32
+		{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}.Debug|Win32.Build.0 = Debug|Win32
+		{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}.Release|Win32.ActiveCfg = Release|Win32
+		{AF4DF544-5678-4325-A4D4-C5E630C2EBF7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
