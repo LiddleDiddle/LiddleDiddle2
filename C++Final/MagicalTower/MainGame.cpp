@@ -110,7 +110,7 @@ void MainGame::gameLoop() {
         static int frameCounter = 0;
         frameCounter++;
         if (frameCounter == 1000) {
-            //std::cout << _fps << std::endl;
+            std::cout << _fps << std::endl;
             frameCounter = 0;
         }
     }

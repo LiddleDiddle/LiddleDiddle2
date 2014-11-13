@@ -25,49 +25,23 @@ void SpriteBatch::begin(GlyphSortType sortType /* GlyphSortType::TEXTURE */) {
     _sortType = sortType;
     _renderBatches.clear();
     // Have to delete any glyphs that remain so we don't have memory leaks!
-    for (int i = 0; i < _glyphs.size(); i++) {
-        delete _glyphs[i];
-    }
     _glyphs.clear();
 }
 
 void SpriteBatch::end() {
+	//set up all pointers for fast sorting
+	_glyphPointers.resize(_glyphs.size());
+	for (size_t i = 0; i < _glyphs.size(); i++)
+	{
+		_glyphPointers[i] = &_glyphs[i];
+	}
     sortGlyphs();
     createRenderBatches();
 }
 
 void SpriteBatch::draw(const glm::vec4& destRect, float rotation, const glm::vec4& uvRect, GLuint texture, float depth, const ColorRGBA8& color) {
 
-	Glyph* newGlyph = new Glyph;
-    newGlyph->texture = texture;
-    newGlyph->depth = depth;
-
-	//tl bl br tr
-	glm::vec2 verts[4] = { glm::vec2(-destRect.z/2,destRect.w/2), glm::vec2(-destRect.z/2,-destRect.w/2), glm::vec2(destRect.z/2,-destRect.w/2), glm::vec2(destRect.z/2,destRect.w/2) };
-	//glm::mat2 rotationMatrix(cos(rotation*PI/180),-sin(rotation*PI/180),sin(rotation*PI/180),cos(rotation*PI/180));
-	glm::mat2 rotationMatrix(cos(rotation),sin(rotation),-sin(rotation),cos(rotation));
-	for (int i = 0; i < 4; i++)
-	{
-		verts[i] = rotationMatrix * verts[i];
-	}
-
-    newGlyph->topLeft.color = color;
-    newGlyph->topLeft.setPosition(verts[0].x + destRect.x, verts[0].y + destRect.y);
-    newGlyph->topLeft.setUV(uvRect.x, uvRect.y + uvRect.w);
-
-    newGlyph->bottomLeft.color = color;
-    newGlyph->bottomLeft.setPosition(verts[1].x + destRect.x, verts[1].y + destRect.y);
-    newGlyph->bottomLeft.setUV(uvRect.x, uvRect.y);
-
-    newGlyph->bottomRight.color = color;
-    newGlyph->bottomRight.setPosition(verts[2].x + destRect.x, verts[2].y + destRect.y);
-    newGlyph->bottomRight.setUV(uvRect.x + uvRect.z, uvRect.y);
-
-    newGlyph->topRight.color = color;
-    newGlyph->topRight.setPosition(verts[3].x + destRect.x, verts[3].y + destRect.y);
-    newGlyph->topRight.setUV(uvRect.x + uvRect.z, uvRect.y + uvRect.w);
-
-    _glyphs.push_back(newGlyph);
+	_glyphs.emplace_back(destRect,rotation,uvRect,texture,depth,color);
 }
 
 void SpriteBatch::renderBatch() {
@@ -89,9 +63,9 @@ void SpriteBatch::createRenderBatches() {
     std::vector <Vertex> vertices;
     // Resize the buffer to the exact size we need so we can treat
     // it like an array
-    vertices.resize(_glyphs.size() * 6);
+    vertices.resize(_glyphPointers.size() * 6);
 
-    if (_glyphs.empty()) {
+    if (_glyphPointers.empty()) {
         return;
     }
 
@@ -99,32 +73,32 @@ void SpriteBatch::createRenderBatches() {
     int cv = 0; // current vertex
 
     //Add the first batch
-    _renderBatches.emplace_back(offset, 6, _glyphs[0]->texture);
-    vertices[cv++] = _glyphs[0]->topLeft;
-    vertices[cv++] = _glyphs[0]->bottomLeft;
-    vertices[cv++] = _glyphs[0]->bottomRight;
-    vertices[cv++] = _glyphs[0]->bottomRight;
-    vertices[cv++] = _glyphs[0]->topRight;
-    vertices[cv++] = _glyphs[0]->topLeft;
+    _renderBatches.emplace_back(offset, 6, _glyphPointers[0]->texture);
+    vertices[cv++] = _glyphPointers[0]->topLeft;
+    vertices[cv++] = _glyphPointers[0]->bottomLeft;
+    vertices[cv++] = _glyphPointers[0]->bottomRight;
+    vertices[cv++] = _glyphPointers[0]->bottomRight;
+    vertices[cv++] = _glyphPointers[0]->topRight;
+    vertices[cv++] = _glyphPointers[0]->topLeft;
     offset += 6;
 
     //Add all the rest of the glyphs
-    for (int cg = 1; cg < _glyphs.size(); cg++) {
+    for (int cg = 1; cg < _glyphPointers.size(); cg++) {
 
         // Check if this glyph can be part of the current batch
-        if (_glyphs[cg]->texture != _glyphs[cg - 1]->texture) {
+        if (_glyphPointers[cg]->texture != _glyphPointers[cg - 1]->texture) {
             // Make a new batch
-            _renderBatches.emplace_back(offset, 6, _glyphs[cg]->texture);
+            _renderBatches.emplace_back(offset, 6, _glyphPointers[cg]->texture);
         } else {
             // If its part of the current batch, just increase numVertices
             _renderBatches.back().numVertices += 6;
         }
-        vertices[cv++] = _glyphs[cg]->topLeft;
-        vertices[cv++] = _glyphs[cg]->bottomLeft;
-        vertices[cv++] = _glyphs[cg]->bottomRight;
-        vertices[cv++] = _glyphs[cg]->bottomRight;
-        vertices[cv++] = _glyphs[cg]->topRight;
-        vertices[cv++] = _glyphs[cg]->topLeft;
+        vertices[cv++] = _glyphPointers[cg]->topLeft;
+        vertices[cv++] = _glyphPointers[cg]->bottomLeft;
+        vertices[cv++] = _glyphPointers[cg]->bottomRight;
+        vertices[cv++] = _glyphPointers[cg]->bottomRight;
+        vertices[cv++] = _glyphPointers[cg]->topRight;
+        vertices[cv++] = _glyphPointers[cg]->topLeft;
         offset += 6;
     }
 
@@ -176,13 +150,13 @@ void SpriteBatch::sortGlyphs() {
    
     switch (_sortType) {
         case GlyphSortType::BACK_TO_FRONT:
-            std::stable_sort(_glyphs.begin(), _glyphs.end(), compareBackToFront);
+			std::stable_sort(_glyphPointers.begin(), _glyphPointers.end(), compareBackToFront);
             break;
         case GlyphSortType::FRONT_TO_BACK:
-            std::stable_sort(_glyphs.begin(), _glyphs.end(), compareFrontToBack);
+			std::stable_sort(_glyphPointers.begin(), _glyphPointers.end(), compareFrontToBack);
             break;
         case GlyphSortType::TEXTURE:
-            std::stable_sort(_glyphs.begin(), _glyphs.end(), compareTexture);
+			std::stable_sort(_glyphPointers.begin(), _glyphPointers.end(), compareTexture);
             break;
     }
 }
