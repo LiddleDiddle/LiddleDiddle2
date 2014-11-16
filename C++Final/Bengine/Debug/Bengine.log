@@ -1,7 +1,7 @@
-﻿Build started 11/15/2014 8:33:06 PM.
-     1>Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/16/2014 6:08:19 PM.
+     1>Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet Bengine.cpp Camera2D.cpp Errors.cpp GLSLProgram.cpp ImageLoader.cpp InputManager.cpp IOManager.cpp picoPNG.cpp ResourceManager.cpp Sprite.cpp SpriteBatch.cpp TextureCache.cpp Timing.cpp Window.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bengine.cpp Camera2D.cpp Errors.cpp GLSLProgram.cpp ImageLoader.cpp InputManager.cpp IOManager.cpp picoPNG.cpp ResourceManager.cpp Sprite.cpp SpriteBatch.cpp TextureCache.cpp Timing.cpp Window.cpp
          Window.cpp
          Timing.cpp
      1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\timing.cpp(24): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
@@ -24,7 +24,6 @@
          Errors.cpp
          Camera2D.cpp
          Bengine.cpp
-         Running Code Analysis for C/C++...
          Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Debug\Bengine.lib" /NOLOGO Debug\Bengine.obj
@@ -42,11 +41,8 @@
          Debug\Timing.obj
          Debug\Window.obj
          Bengine.vcxproj -> C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Debug\Bengine.lib
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(332): warning C6011: Dereferencing NULL pointer 'out_'. 
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(427): warning C6293: Ill-defined for-loop:  counts down from minimum.
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(495): warning C6011: Dereferencing NULL pointer 'out_'. 
-     1>Done Building Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:45.04
+Time Elapsed 00:00:05.18

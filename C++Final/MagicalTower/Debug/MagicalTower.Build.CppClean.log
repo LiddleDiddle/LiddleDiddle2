@@ -1,44 +1,25 @@
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\vc120.pdb
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\vc120.idb
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\level.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\levelloader.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\modality.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\tinyxml2.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\gamestate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\gamestatemanager.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\gamestateprovider.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\generalmanager.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\player.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\drawable.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\gameobject.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\gameworld.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\ground.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\introgamestate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\mainmenustate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\updateable.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\bullet.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\defaultgamestatemanager.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\assignment4gamestate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\ball.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\basicstate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\box.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\controllermenustate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\maingame.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\mainmenugamestate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\multicharacterselectstate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\pendulum.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\physicstile.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\remedymenustate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\seesaw.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\stageselectstate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\startscreenstate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\tilemapeditorstate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\tylermenustate.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\main.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\magicaltower\debug\wall.obj
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\debug\magicaltower.ilk
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\debug\magicaltower.exe
-c:\users\zephyr\documents\visual studio 2013\projects\c++final\debug\magicaltower.pdb
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\vc120.pdb
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\vc120.idb
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\levelloader.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\main.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\maingame.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\mainmenugamestate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\mainmenustate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\modality.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\multicharacterselectstate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\pendulum.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\physicstile.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\player.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\remedymenustate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\seesaw.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\stageselectstate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\standingcharacterstate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\startscreenstate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tilemapeditorstate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tinyxml2.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tylermenustate.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\updateable.obj
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\wall.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\assignment4gamestate.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\ball.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\basicstate.obj
@@ -56,33 +37,15 @@ c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\generalmanager
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\ground.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\introgamestate.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\level.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\levelloader.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\main.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\maingame.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\mainmenugamestate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\mainmenustate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\modality.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\multicharacterselectstate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\pendulum.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\physicstile.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\player.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\remedymenustate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\seesaw.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\stageselectstate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\startscreenstate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tilemapeditorstate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tinyxml2.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\tylermenustate.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\updateable.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\wall.obj
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\vc120.idb
-c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\vc120.pdb
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\character.obj
 c:\users\zephyr\desktop\liddlediddle2\c++final\debug\magicaltower.pdb
-c:\users\zephyr\desktop\liddlediddle2\c++final\debug\magicaltower.exe
-c:\users\zephyr\desktop\liddlediddle2\c++final\debug\magicaltower.ilk
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\cl.command.1.tlog
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\cl.read.1.tlog
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\cl.write.1.tlog
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link-cvtres.read.1.tlog
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link-cvtres.write.1.tlog
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link-rc.read.1.tlog
+c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link-rc.write.1.tlog
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link.command.1.tlog
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link.read.1.tlog
 c:\users\zephyr\desktop\liddlediddle2\c++final\magicaltower\debug\magicaltower.tlog\link.write.1.tlog
