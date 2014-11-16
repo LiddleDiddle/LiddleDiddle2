@@ -43,6 +43,7 @@
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(SolutionDir)Debug/;$(SolutionDir)deps/lib/;$(LibraryPath)</LibraryPath>
     <IncludePath>$(SolutionDir)deps/include/;$(SolutionDir);$(IncludePath)</IncludePath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -57,6 +58,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -89,6 +91,7 @@
     <ClCompile Include="BasicState.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="ControllerMenuState.cpp" />
     <ClCompile Include="DefaultGameStateManager.cpp" />
     <ClCompile Include="Drawable.cpp" />
@@ -114,6 +117,7 @@
     <ClCompile Include="RemedyMenuState.cpp" />
     <ClCompile Include="Seesaw.cpp" />
     <ClCompile Include="StageSelectState.cpp" />
+    <ClCompile Include="StandingCharacterState.cpp" />
     <ClCompile Include="StartScreenState.cpp" />
     <ClCompile Include="TilemapEditorState.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
@@ -127,6 +131,8 @@
     <ClInclude Include="BasicState.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CharacterState.h" />
     <ClInclude Include="ControllerMenuState.h" />
     <ClInclude Include="DefaultGameStateManager.h" />
     <ClInclude Include="Drawable.h" />
@@ -151,6 +157,7 @@
     <ClInclude Include="RemedyMenuState.h" />
     <ClInclude Include="Seesaw.h" />
     <ClInclude Include="StageSelectState.h" />
+    <ClInclude Include="StandingCharacterState.h" />
     <ClInclude Include="StartScreenState.h" />
     <ClInclude Include="TilemapEditorState.h" />
     <ClInclude Include="tinyxml2.h" />

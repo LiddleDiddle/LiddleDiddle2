@@ -1,21 +1,52 @@
-﻿Build started 11/12/2014 8:23:36 PM.
+﻿Build started 11/15/2014 8:33:06 PM.
      1>Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SpriteBatch.cpp Timing.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze /analyze:plugin"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\\bin\localespc.dll" /errorReport:prompt   /analyze:quiet Bengine.cpp Camera2D.cpp Errors.cpp GLSLProgram.cpp ImageLoader.cpp InputManager.cpp IOManager.cpp picoPNG.cpp ResourceManager.cpp Sprite.cpp SpriteBatch.cpp TextureCache.cpp Timing.cpp Window.cpp
+         Window.cpp
          Timing.cpp
      1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\timing.cpp(24): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
      1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\timing.cpp(41): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
      1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\timing.cpp(44): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
+         TextureCache.cpp
          SpriteBatch.cpp
      1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(8): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(28): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(29): error C2440: 'delete' : cannot convert from 'Bengine::Glyph' to 'void*'
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(56): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(89): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\spritebatch.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+         Sprite.cpp
+         ResourceManager.cpp
+         picoPNG.cpp
+         IOManager.cpp
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\iomanager.cpp(19): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\iomanager.cpp(23): warning C4244: '-=' : conversion from 'std::streamoff' to 'int', possible loss of data
+         InputManager.cpp
+         ImageLoader.cpp
+         GLSLProgram.cpp
+         Errors.cpp
+         Camera2D.cpp
+         Bengine.cpp
+         Running Code Analysis for C/C++...
          Generating Code...
-     1>Done Building Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" (Build target(s)) -- FAILED.
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Debug\Bengine.lib" /NOLOGO Debug\Bengine.obj
+         Debug\Camera2D.obj
+         Debug\Errors.obj
+         Debug\GLSLProgram.obj
+         Debug\ImageLoader.obj
+         Debug\InputManager.obj
+         Debug\IOManager.obj
+         Debug\picoPNG.obj
+         Debug\ResourceManager.obj
+         Debug\Sprite.obj
+         Debug\SpriteBatch.obj
+         Debug\TextureCache.obj
+         Debug\Timing.obj
+         Debug\Window.obj
+         Bengine.vcxproj -> C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Debug\Bengine.lib
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(332): warning C6011: Dereferencing NULL pointer 'out_'. 
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(427): warning C6293: Ill-defined for-loop:  counts down from minimum.
+     1>c:\users\zephyr\desktop\liddlediddle2\c++final\bengine\picopng.cpp(495): warning C6011: Dereferencing NULL pointer 'out_'. 
+     1>Done Building Project "C:\Users\Zephyr\Desktop\LiddleDiddle2\C++Final\Bengine\Bengine.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.07
+Time Elapsed 00:00:45.04

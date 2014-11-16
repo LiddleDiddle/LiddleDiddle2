@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{8f6db8cf-3fd9-40bc-9c4f-0487ae22b473}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment4GameState.cpp">
@@ -123,6 +126,12 @@
     <ClCompile Include="wall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="StandingCharacterState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
@@ -229,6 +238,15 @@
     </ClInclude>
     <ClInclude Include="wall.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="StandingCharacterState.h">
+      <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
