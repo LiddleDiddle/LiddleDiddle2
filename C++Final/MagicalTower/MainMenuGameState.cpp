@@ -7,6 +7,7 @@
 #include <Bengine/ResourceManager.h>
 #include "MainGame.h"
 #include "StartScreenState.h"
+#include "LevelState.h"
 
 
 
@@ -48,7 +49,7 @@ void MainMenuGameState::Update(float elapsedTime, Bengine::InputManager& _inputM
 		}
 		if (mouseCoords.x < _RemedyRect.x + 100 && mouseCoords.x > _RemedyRect.x -100 && mouseCoords.y > _RemedyRect.y - 50 && mouseCoords.y < _RemedyRect.y +50)
 		{
-			this->gameStateManager->Switch(std::shared_ptr<GameState>(new RemedyMenuState(gameStateManager)));
+			this->gameStateManager->Switch(std::shared_ptr<GameState>(new LevelState(gameStateManager)));
 		}
 
 		if (mouseCoords.x < _gameRect.x + 100 && mouseCoords.x > _gameRect.x -100 && mouseCoords.y > _gameRect.y - 50 && mouseCoords.y < _gameRect.y +50)

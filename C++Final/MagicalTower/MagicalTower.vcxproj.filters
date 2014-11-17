@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Hardcoded Level">
+      <UniqueIdentifier>{81c6a8fd-7128-470a-9952-eaf54a74fa44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment4GameState.cpp">
@@ -123,6 +126,21 @@
     <ClCompile Include="wall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LevelGround.cpp">
+      <Filter>Hardcoded Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelMiddleWall.cpp">
+      <Filter>Hardcoded Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelPlatform.cpp">
+      <Filter>Hardcoded Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelState.cpp">
+      <Filter>Hardcoded Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelWall.cpp">
+      <Filter>Hardcoded Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
@@ -229,6 +247,21 @@
     </ClInclude>
     <ClInclude Include="wall.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelGround.h">
+      <Filter>Hardcoded Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelMiddleWall.h">
+      <Filter>Hardcoded Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelPlatform.h">
+      <Filter>Hardcoded Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelState.h">
+      <Filter>Hardcoded Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelWall.h">
+      <Filter>Hardcoded Level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
