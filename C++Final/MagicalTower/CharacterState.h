@@ -1,17 +1,17 @@
 #pragma once
-#include "Character.h"
+#include <Bengine\SpriteBatch.h>
+#include <Bengine\ResourceManager.h>
 #include "GeneralManager.h"
-#include <Bengine/ResourceManager.h>
 
-#define GENERAL_MANAGER TheGeneralManager::Instance()->
+#define GENERAL_MANAGER TheGeneralManager::Instance()
 
-class CharacterState 
-{
+class CharacterState{
 public:
-	virtual ~CharacterState() {}
-	virtual CharacterState* handleInput(Character& character, int controller) = 0;
-	virtual void update(Character& character) {}
-	virtual void enter(Character& character) {}
+	virtual void update(float timeStep) {};
+	std::string getTexture() { return _texture; };
+	virtual void processInputs(int controllerNumber) {};
+	virtual void enter() {};
+	virtual void quit() {};
 protected:
-	Bengine::GLTexture _texture;
+	std::string _texture;
 };

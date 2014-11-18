@@ -1,18 +1,17 @@
 #pragma once
-#include <Bengine/SpriteBatch.h>
-#include <Bengine/ResourceManager.h>
-class Character
-{
+
+#include <Bengine\SpriteBatch.h>
+#include <Bengine\ResourceManager.h>
+#include "CharacterState.h"
+
+class Character{
 public:
-	Character();
-	~Character();
-
-	void handleInput(int controller);
-	void update();
-	void setTexture(Bengine::GLTexture texture) { _texture = texture; }
-	void draw(Bengine::SpriteBatch& spriteBatch);
+	virtual void init() {}
+	virtual void update(float timeStep) {}
+	virtual void draw(Bengine::SpriteBatch spriteBatch) {}
+protected:
+	CharacterState* _currentState;
+	bool _isAlive;
+	int _mana;
 private:
-	//CharacterState* _state;
-	Bengine::GLTexture _texture;
 };
-

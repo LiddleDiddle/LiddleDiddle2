@@ -16,6 +16,9 @@
     <Filter Include="Hardcoded Level">
       <UniqueIdentifier>{81c6a8fd-7128-470a-9952-eaf54a74fa44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{1569545a-7484-411f-8b07-5c95aea5b524}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment4GameState.cpp">
@@ -141,6 +144,12 @@
     <ClCompile Include="LevelWall.cpp">
       <Filter>Hardcoded Level</Filter>
     </ClCompile>
+    <ClCompile Include="StandingState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="WrekTangle.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
@@ -262,6 +271,18 @@
     </ClInclude>
     <ClInclude Include="LevelWall.h">
       <Filter>Hardcoded Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="StandingState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="WrekTangle.h">
+      <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

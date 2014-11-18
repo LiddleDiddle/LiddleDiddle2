@@ -121,12 +121,14 @@
     <ClCompile Include="RemedyMenuState.cpp" />
     <ClCompile Include="Seesaw.cpp" />
     <ClCompile Include="StageSelectState.cpp" />
+    <ClCompile Include="StandingState.cpp" />
     <ClCompile Include="StartScreenState.cpp" />
     <ClCompile Include="TilemapEditorState.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
     <ClCompile Include="TylerMenuState.cpp" />
     <ClCompile Include="Updateable.cpp" />
     <ClCompile Include="wall.cpp" />
+    <ClCompile Include="WrekTangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h" />
@@ -134,6 +136,8 @@
     <ClInclude Include="BasicState.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CharacterState.h" />
     <ClInclude Include="ControllerMenuState.h" />
     <ClInclude Include="DefaultGameStateManager.h" />
     <ClInclude Include="Drawable.h" />
@@ -163,12 +167,14 @@
     <ClInclude Include="RemedyMenuState.h" />
     <ClInclude Include="Seesaw.h" />
     <ClInclude Include="StageSelectState.h" />
+    <ClInclude Include="StandingState.h" />
     <ClInclude Include="StartScreenState.h" />
     <ClInclude Include="TilemapEditorState.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="TylerMenuState.h" />
     <ClInclude Include="Updateable.h" />
     <ClInclude Include="wall.h" />
+    <ClInclude Include="WrekTangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
