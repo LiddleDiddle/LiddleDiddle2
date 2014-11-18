@@ -9,9 +9,11 @@ class Character{
 public:
 	virtual void init(int x, int y, b2World* world) {}
 	virtual void update(float timeStep) {}
-	virtual void draw(Bengine::SpriteBatch spriteBatch) {}
+	virtual void draw(Bengine::SpriteBatch& spriteBatch) {}
 protected:
 	CharacterState* _currentState;
+	CharacterState* _mainWeaponState;
+	CharacterState* _item;
 	bool _alive;
 	int _mana;
 	b2Body* _body;

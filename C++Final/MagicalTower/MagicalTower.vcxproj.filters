@@ -156,15 +156,15 @@
     <ClCompile Include="RunningState.cpp">
       <Filter>Character</Filter>
     </ClCompile>
+    <ClCompile Include="BasicArrowState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ball.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Box.h">
@@ -295,6 +295,12 @@
     </ClInclude>
     <ClInclude Include="RunningState.h">
       <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicArrowState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicState.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

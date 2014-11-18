@@ -14,7 +14,7 @@ CharacterState* StandingState::update(float timeStep){
 	return NULL;
 }
 
-void StandingState::draw(Bengine::SpriteBatch spriteBatch, int x, int y)
+void StandingState::draw(Bengine::SpriteBatch& spriteBatch, int x, int y)
 {
 	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 	Bengine::ColorRGBA8 color(255, 255, 255, 255);
