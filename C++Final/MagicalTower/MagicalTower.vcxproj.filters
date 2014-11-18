@@ -150,6 +150,12 @@
     <ClCompile Include="WrekTangle.cpp">
       <Filter>Character</Filter>
     </ClCompile>
+    <ClCompile Include="JumpingState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="RunningState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
@@ -282,6 +288,12 @@
       <Filter>Character</Filter>
     </ClInclude>
     <ClInclude Include="WrekTangle.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpingState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="RunningState.h">
       <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>

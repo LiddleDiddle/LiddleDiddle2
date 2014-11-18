@@ -2,16 +2,18 @@
 #include <Bengine\SpriteBatch.h>
 #include <Bengine\ResourceManager.h>
 #include "GeneralManager.h"
+#include "MainGame.h"
 
+#define CAMERA TheMainGame::Instance()->_camera
 #define GENERAL_MANAGER TheGeneralManager::Instance()
 
 class CharacterState{
 public:
-	virtual void update(float timeStep) {};
-	std::string getTexture() { return _texture; };
+	virtual CharacterState* update(float timeStep) { return NULL; };
+	virtual void draw(Bengine::SpriteBatch spriteBatch, int x, int y) {}
 	virtual void processInputs(int controllerNumber) {};
 	virtual void enter() {};
-	virtual void quit() {};
+	virtual void exit() {};
 protected:
-	std::string _texture;
+	Bengine::GLTexture _texture;
 };
