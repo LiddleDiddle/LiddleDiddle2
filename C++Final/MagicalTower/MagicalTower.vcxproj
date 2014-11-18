@@ -102,6 +102,7 @@
     <ClCompile Include="GeneralManager.cpp" />
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="IntroGameState.cpp" />
+    <ClCompile Include="JumpingState.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelGround.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
@@ -119,6 +120,7 @@
     <ClCompile Include="PhysicsTile.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RemedyMenuState.cpp" />
+    <ClCompile Include="RunningState.cpp" />
     <ClCompile Include="Seesaw.cpp" />
     <ClCompile Include="StageSelectState.cpp" />
     <ClCompile Include="StandingState.cpp" />
@@ -149,6 +151,7 @@
     <ClInclude Include="GeneralManager.h" />
     <ClInclude Include="Ground.h" />
     <ClInclude Include="IntroGameState.h" />
+    <ClInclude Include="JumpingState.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelGround.h" />
     <ClInclude Include="LevelLoader.h" />
@@ -165,6 +168,7 @@
     <ClInclude Include="PhysicsTile.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RemedyMenuState.h" />
+    <ClInclude Include="RunningState.h" />
     <ClInclude Include="Seesaw.h" />
     <ClInclude Include="StageSelectState.h" />
     <ClInclude Include="StandingState.h" />
