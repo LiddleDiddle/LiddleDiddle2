@@ -9,6 +9,7 @@
 #include "LevelPlatform.h"
 #include "LevelWall.h"
 
+
 #define WIDTH 32
 #define HEIGHT 18
 #define CAMERA TheMainGame::Instance()->_camera
@@ -22,7 +23,7 @@ gameStateManager(gameStateManager)
 
 void LevelState::Entered() {
 	CreateBox2dWorld();
-	ball = new Ball(world, 16, 8);
+	wrek.init(16, 8, world);
 }
 
 void LevelState::Exiting() {
@@ -71,28 +72,12 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 		}
 	}
 
-	ball->Draw(spriteBatch);
+	wrek.draw(spriteBatch);
 
 }
 
 void LevelState::ProcessInput(Bengine::InputManager inputManager){
 
-	if (inputManager.isKeyPressed(SDLK_RIGHT))
-	{
-		ball->addForceCenter(3000, 0);
-	}
-	if (inputManager.isKeyPressed(SDLK_LEFT))
-	{
-		ball->addForceCenter(-3000, 0);
-	}
-	if (inputManager.isKeyPressed(SDLK_UP))
-	{
-		ball->addForceCenter(0, 3000);
-	}
-	if (inputManager.isKeyPressed(SDLK_DOWN))
-	{
-		ball->addForceCenter(0, -3000);
-	}
 }
 
 void LevelState::CreateBox2dWorld()

@@ -9,6 +9,7 @@
 #include <Bengine/InputManager.h>
 #include <memory>
 #include <Box2D/Box2D.h>
+#include "WrekTangle.h"
 
 
 
@@ -43,5 +44,5 @@ private:
 	b2World* world;
 	std::vector<GameObject*> objects;
 	b2Body* m_groundBody;
-	Ball* ball;
+	WrekTangle wrek;
 };
