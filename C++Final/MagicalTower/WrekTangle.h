@@ -6,8 +6,8 @@ class WrekTangle :
 public:
 	WrekTangle();
 	~WrekTangle();
-	void init(int x, int y, b2World* world);
+	void init(int controllerNumber, float x, float y, b2World* world);
 	void update(float timeStep);
-	void draw(Bengine::SpriteBatch spriteBatch);
+	void draw(Bengine::SpriteBatch& spriteBatch);
 };
 

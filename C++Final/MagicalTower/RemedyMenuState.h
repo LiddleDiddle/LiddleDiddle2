@@ -12,6 +12,7 @@
 #include "PhysicsTile.h"
 #include <vector>
 
+#include "WrekTangle.h"
 
 
 class RemedyMenuState : public GameState, public virtual Updateable, public virtual Drawable
@@ -39,7 +40,7 @@ public:
 
 private: 
 	std::shared_ptr<GameStateManager> gameStateManager;
-
+	WrekTangle madoka;
 	b2World* world;
 	Ball* ball;
 	std::vector<PhysicsTile*> tiles;

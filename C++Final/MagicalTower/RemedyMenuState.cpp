@@ -8,6 +8,7 @@
 #include <cmath>
 #include "tinyxml2.h"
 #include "GeneralManager.h"
+
 using namespace tinyxml2;
 
 #define CAMERA TheMainGame::Instance()->_camera
@@ -36,23 +37,6 @@ void RemedyMenuState::Update(float elapsedTime, Bengine::InputManager& inputMana
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 	world->Step(elapsedTime, velocityIterations, positionIterations);
-
-	if(inputManager.isKeyPressed(SDLK_RIGHT))
-	{
-		ball->addForceCenter(3000,0);
-	}
-	if(inputManager.isKeyPressed(SDLK_LEFT))
-	{
-		ball->addForceCenter(-3000,0);
-	}
-	if(inputManager.isKeyPressed(SDLK_UP))
-	{
-		ball->addForceCenter(0,3000);
-	}
-	if(inputManager.isKeyPressed(SDLK_DOWN))
-	{
-		ball->addForceCenter(0,-3000);
-	}
 }
 
 void RemedyMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
@@ -61,7 +45,6 @@ void RemedyMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 	{
 		tiles[i]->Draw(spriteBatch);
 	}
-	//ball->Draw(spriteBatch);
 }
 
 void RemedyMenuState::BuildLevel(int** level)

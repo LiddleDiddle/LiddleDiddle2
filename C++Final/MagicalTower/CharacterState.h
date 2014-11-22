@@ -3,6 +3,7 @@
 #include <Bengine\ResourceManager.h>
 #include "GeneralManager.h"
 #include "MainGame.h"
+#include <Box2D/Box2D.h>
 
 #define CAMERA TheMainGame::Instance()->_camera
 #define GENERAL_MANAGER TheGeneralManager::Instance()
@@ -10,7 +11,7 @@
 class CharacterState{
 public:
 	virtual CharacterState* update(float timeStep) { return NULL; };
-	virtual void draw(Bengine::SpriteBatch& spriteBatch, int x, int y) {}
+	virtual void draw(Bengine::SpriteBatch& spriteBatch, b2Body *body) {}
 	virtual void processInputs(int controllerNumber) {};
 	virtual void enter() {};
 	virtual void exit() {};

@@ -23,7 +23,6 @@ gameStateManager(gameStateManager)
 
 void LevelState::Entered() {
 	CreateBox2dWorld();
-	wrek.init(16, 8, world);
 }
 
 void LevelState::Exiting() {
@@ -71,8 +70,6 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 			}
 		}
 	}
-
-	wrek.draw(spriteBatch);
 
 }
 

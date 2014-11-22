@@ -10,15 +10,15 @@ WrekTangle::~WrekTangle(){
 
 }
 
-void WrekTangle::init(int x, int y, b2World* world) {
+void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_world = world;
 	
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 
 	bodyDef.position.Set(x, y);
+	printf("x is equal to %f\n", x);
 	bodyDef.fixedRotation = true;
-
 	b2Vec2 v(0, 1.0f);
 
 	_body = world->CreateBody(&bodyDef);
@@ -38,6 +38,8 @@ void WrekTangle::init(int x, int y, b2World* world) {
 	_mana = 100;
 	_alive = true;
 	_currentState = new StandingState;
+	_currentState->enter();
+	_controllerNumber = controllerNumber;
 }
 
 void WrekTangle::update(float timeStep){
@@ -60,6 +62,6 @@ void WrekTangle::update(float timeStep){
 	}
 }
 
-void WrekTangle::draw(Bengine::SpriteBatch spriteBatch){
-	_currentState->draw(spriteBatch, _body->GetPosition().x, _body->GetPosition().y);
+void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
+	_currentState->draw(spriteBatch, _body);
 }
