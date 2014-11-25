@@ -11,5 +11,7 @@ public:
 	void processInputs(int controllerNumber);
 	void enter();
 	void exit();
+private:
+	bool jumpUsed;
 };
 
