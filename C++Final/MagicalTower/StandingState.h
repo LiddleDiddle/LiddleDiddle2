@@ -6,7 +6,7 @@ class StandingState :
 public:
 	StandingState();
 	~StandingState();
-	CharacterState* update(float timeStep);
+	CharacterState* update(b2Body &body, int controllerNumber);
 	void draw(Bengine::SpriteBatch& spriteBatch, b2Body *body);
 	void processInputs(int controllerNumber);
 	void enter();

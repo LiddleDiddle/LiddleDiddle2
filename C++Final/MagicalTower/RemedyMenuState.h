@@ -39,6 +39,7 @@ public:
 	
 
 private: 
+	std::vector<Character*> _characters;
 	std::shared_ptr<GameStateManager> gameStateManager;
 	WrekTangle madoka;
 	b2World* world;

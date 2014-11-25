@@ -25,6 +25,33 @@ RemedyMenuState::RemedyMenuState(const std::shared_ptr<GameStateManager> &gameSt
 void RemedyMenuState::Entered()
 {
 	BuildLevel(TheGeneralManager::Instance()->_levels[TheGeneralManager::Instance()->currentLevel].LoadLevel());
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters.push_back(new WrekTangle());
+	}
+	switch (GENERAL_MANAGER->_joinedPlayers.size())
+	{
+	case 1 :
+		_characters[0]->init(0, 3, 14, world);
+		break;
+	case 2:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		break;
+	case 3:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		_characters[2]->init(2, 6, 3, world);
+		break;
+	case 4:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		_characters[3]->init(2, 6, 3, world);
+		_characters[4]->init(3, 27, 3, world);
+		break;
+	default:
+		break;
+	}
 }
 
 void RemedyMenuState::Exiting()
@@ -34,6 +61,10 @@ void RemedyMenuState::Exiting()
 
 void RemedyMenuState::Update(float elapsedTime, Bengine::InputManager& inputManager)
 {
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters[i]->update(elapsedTime);
+	}
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 	world->Step(elapsedTime, velocityIterations, positionIterations);
@@ -41,6 +72,10 @@ void RemedyMenuState::Update(float elapsedTime, Bengine::InputManager& inputMana
 
 void RemedyMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 {
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters[i]->draw(spriteBatch);
+	}
 	for (int i = 0; i < tiles.size(); ++i)
 	{
 		tiles[i]->Draw(spriteBatch);
@@ -57,7 +92,7 @@ void RemedyMenuState::BuildLevel(int** level)
 		{
 			if (level[i][j] != 0)
 			{
-				tiles.push_back(new PhysicsTile(world, b2Vec2(j + HALF_TILE_WIDTH, i + HALF_TILE_WIDTH), level[i][j]));
+				tiles.emplace_back(new PhysicsTile(world, b2Vec2(j + HALF_TILE_WIDTH, i + HALF_TILE_WIDTH), level[i][j]));
 			}
 		}
 	}

@@ -10,7 +10,7 @@
 
 class CharacterState{
 public:
-	virtual CharacterState* update(float timeStep) { return NULL; };
+	virtual CharacterState* update(b2Body &body, int controllerNumber) { return NULL; };
 	virtual void draw(Bengine::SpriteBatch& spriteBatch, b2Body *body) {}
 	virtual void processInputs(int controllerNumber) {};
 	virtual void enter() {};

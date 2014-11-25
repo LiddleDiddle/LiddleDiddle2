@@ -31,7 +31,7 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 
 	fixtureDef.friction = 0.6f;
 	fixtureDef.density = 1.0f;
-	fixtureDef.restitution = 0.3f;
+	fixtureDef.restitution = 0.0f;
 
 	_body->CreateFixture(&fixtureDef);
 
@@ -44,7 +44,7 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 
 void WrekTangle::update(float timeStep){
 
-	CharacterState* tempState = _currentState->update(timeStep);
+	CharacterState* tempState = _currentState->update(*_body, _controllerNumber);
 
 
 	if (tempState != NULL)
