@@ -23,6 +23,33 @@ gameStateManager(gameStateManager)
 
 void LevelState::Entered() {
 	CreateBox2dWorld();
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters.push_back(new WrekTangle());
+	}
+	switch (GENERAL_MANAGER->_joinedPlayers.size())
+	{
+	case 1:
+		_characters[0]->init(0, 3, 14, world);
+		break;
+	case 2:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		break;
+	case 3:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		_characters[2]->init(2, 6, 3, world);
+		break;
+	case 4:
+		_characters[0]->init(0, 6, 14, world);
+		_characters[1]->init(1, 27, 14, world);
+		_characters[3]->init(2, 6, 3, world);
+		_characters[4]->init(3, 27, 3, world);
+		break;
+	default:
+		break;
+	}
 }
 
 void LevelState::Exiting() {
@@ -30,7 +57,12 @@ void LevelState::Exiting() {
 }
 
 void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager) {
-	ProcessInput(_inputManager);
+	//ProcessInput(_inputManager);
+
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters[i]->update(elapsedTime);
+	}
 
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
@@ -51,6 +83,11 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Assignment 4/Box.png");
 	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tile2.png");
 	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tile3.png");
+
+	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+	{
+		_characters[i]->draw(spriteBatch);
+	}
 
 	for (int i = 0; i < HEIGHT; ++i)
 	{
@@ -79,7 +116,7 @@ void LevelState::ProcessInput(Bengine::InputManager inputManager){
 
 void LevelState::CreateBox2dWorld()
 {
-	b2Vec2 gravity(0.0f, -10.0f);
+	b2Vec2 gravity(0.0f, -30.0f);
 
 	world = new b2World(gravity);
 

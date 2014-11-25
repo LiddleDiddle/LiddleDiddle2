@@ -14,13 +14,28 @@ CharacterState* StandingState::update(b2Body &body , int controllerNumber){
 	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_A))
 	{
 		std::cout << "A pressed" << std::endl;
-		body.ApplyForceToCenter(b2Vec2(0, 1500), true);
+		body.ApplyForceToCenter(b2Vec2(0, 2000), true);
 	}
 
 	if (body.GetLinearVelocity().y > 0.1 || body.GetLinearVelocity().y < -0.1)
 	{
 		return new JumpingState;
 	}
+
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x > 0.05f || GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x < -0.05f)
+	{
+		body.ApplyForceToCenter(b2Vec2(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x* 1000,0), true);
+	}
+
+	if (body.GetLinearVelocity().x > 3)
+	{
+		body.SetLinearVelocity(b2Vec2(3, body.GetLinearVelocity().y));
+	}
+	else if (body.GetLinearVelocity().x < -3)
+	{
+		body.SetLinearVelocity(b2Vec2(-3, body.GetLinearVelocity().y));
+	}
+
 	return NULL;
 }
 

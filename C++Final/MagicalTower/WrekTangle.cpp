@@ -29,7 +29,7 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 
-	fixtureDef.friction = 0.6f;
+	fixtureDef.friction = 1.0f;
 	fixtureDef.density = 1.0f;
 	fixtureDef.restitution = 0.0f;
 

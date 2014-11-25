@@ -15,6 +15,20 @@ CharacterState* JumpingState::update(b2Body & body, int controllerNumber){
 	{
 		return new StandingState;
 	}
+
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x > 0.05f || GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x < -0.05f)
+	{
+		body.ApplyForceToCenter(b2Vec2(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x * 50, 0), true);
+	}
+
+	if (body.GetLinearVelocity().x > 10)
+	{
+		body.SetLinearVelocity(b2Vec2(10, body.GetLinearVelocity().y));
+	}
+	else if (body.GetLinearVelocity().x < -10)
+	{
+		body.SetLinearVelocity(b2Vec2(-10, body.GetLinearVelocity().y));
+	}
 	return NULL;
 }
 
@@ -26,15 +40,6 @@ void JumpingState::draw(Bengine::SpriteBatch& spriteBatch, b2Body *body){
 }
 
 void JumpingState::processInputs(int controllerNumber){
-	if (GENERAL_MANAGER->_players[controllerNumber].isKeyPressed(SDL_CONTROLLER_BUTTON_A))
-	{
-		std::cout << "holy fuck I'm jumping\n";
-	}
-
-	if (GENERAL_MANAGER->_players[controllerNumber].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER))
-	{
-		std::cout << "Wow, I'm dodging. I can feel the wind in my hair!\n";
-	}
 
 }
 

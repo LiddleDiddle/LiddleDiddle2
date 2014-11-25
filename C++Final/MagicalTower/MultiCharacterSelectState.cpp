@@ -8,7 +8,7 @@
 #include "ControllerMenuState.h"
 #include "GeneralManager.h"
 #include "MainGame.h"
-
+#include "LevelState.h"
 #define GENERAL_MANAGER TheGeneralManager::Instance()
 
 MultiCharacterSelectState::MultiCharacterSelectState(const std::shared_ptr<GameStateManager> &gameStateManager) :
@@ -105,7 +105,7 @@ void MultiCharacterSelectState::Update(float elapsedTime, Bengine::InputManager&
 			}
 			if (isEveryoneReady)
 			{
-				this->gameStateManager->Switch(std::shared_ptr<GameState>(new StageSelectState(gameStateManager)));
+				this->gameStateManager->Switch(std::shared_ptr<GameState>(new LevelState(gameStateManager)));
 				return;
 			}
 		}

@@ -23,7 +23,7 @@ void LevelPlatform::CreateBox2dObject(float x, float y)
 	staticBox.SetAsBox(3.5f, 0.5f);
 
 	bodyDef.type = b2_staticBody;
-	fixtureDef.friction = 0.3f;
+	fixtureDef.friction = 0.5f;
 	fixtureDef.density = 1.0f;
 	fixtureDef.restitution = 0.0f;
 

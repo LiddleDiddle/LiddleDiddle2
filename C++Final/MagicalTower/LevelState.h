@@ -38,6 +38,7 @@ public: void Exiting();
 
 
 private:
+	std::vector<Character*> _characters;
 	std::shared_ptr<GameStateManager> gameStateManager;
 	glm::vec4 startRect;
 	int** levelArray;
