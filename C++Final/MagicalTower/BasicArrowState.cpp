@@ -20,7 +20,7 @@ CharacterState* BasicArrowState::update(b2Body &body, int controllerNumber){
 	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) && _magnitude >= 0.2)
 	{
 		glm::vec2 temp = glm::normalize(rightStick);
-		arrows.emplace_back(body.GetPosition().x + (temp.x * 2), body.GetPosition().y + (temp.y * 2), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed));
+		arrows.emplace_back(body.GetPosition().x + (temp.x * 1.0f), body.GetPosition().y + (temp.y * 1.5f), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed));
 		
 	}
 	return NULL;
