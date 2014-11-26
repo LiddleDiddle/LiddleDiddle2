@@ -14,9 +14,12 @@
 #define HEIGHT 18
 #define CAMERA TheMainGame::Instance()->_camera
 
+b2World* LevelState::world;
+
 LevelState::LevelState(const std::shared_ptr<GameStateManager> &gameStateManager) :
 gameStateManager(gameStateManager)
 {
+	
 	Level* level = new Level("Hardcoded Level", "Level001.png", "Level001.xml");
 	levelArray = level->LoadLevel();
 }
@@ -79,11 +82,11 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 	color.g = 255;
 	color.b = 255;
 	color.a = 255;
-
 	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Assignment 4/Box.png");
 	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tile2.png");
 	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tile3.png");
 
+	
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
 	{
 		_characters[i]->draw(spriteBatch);

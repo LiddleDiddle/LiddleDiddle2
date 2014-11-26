@@ -1,5 +1,6 @@
 #include "WrekTangle.h"
 #include "StandingState.h"
+#include "BasicArrowState.h"
 
 WrekTangle::WrekTangle(){
 
@@ -7,7 +8,8 @@ WrekTangle::WrekTangle(){
 
 
 WrekTangle::~WrekTangle(){
-
+	delete _currentState;
+	delete _mainWeaponState;
 }
 
 void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
@@ -39,13 +41,15 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_alive = true;
 	_currentState = new StandingState;
 	_currentState->enter();
+	_mainWeaponState = new BasicArrowState;
+	_mainWeaponState->enter();
 	_controllerNumber = controllerNumber;
 }
 
 void WrekTangle::update(float timeStep){
 
 	CharacterState* tempState = _currentState->update(*_body, _controllerNumber);
-
+	_mainWeaponState->update(*_body, _controllerNumber);
 
 	if (tempState != NULL)
 	{
@@ -64,4 +68,5 @@ void WrekTangle::update(float timeStep){
 
 void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
 	_currentState->draw(spriteBatch, _body);
+	_mainWeaponState->draw(spriteBatch,_body);
 }

@@ -29,7 +29,7 @@ CharacterState* JumpingState::update(b2Body & body, int controllerNumber){
 	{
 		body.SetLinearVelocity(b2Vec2(-10, body.GetLinearVelocity().y));
 	}
-	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_A) && jumpUsed == false)
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_LEFTSHOULDER) && jumpUsed == false)
 	{
 		std::cout << "A pressed" << std::endl;
 		body.SetLinearVelocity(b2Vec2(body.GetLinearVelocity().x, 0.0f));

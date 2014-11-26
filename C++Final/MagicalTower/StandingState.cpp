@@ -11,7 +11,7 @@ StandingState::~StandingState()
 }
 
 CharacterState* StandingState::update(b2Body &body , int controllerNumber){
-	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_A))
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_LEFTSHOULDER))
 	{
 		std::cout << "A pressed" << std::endl;
 		body.ApplyForceToCenter(b2Vec2(0, 2000), true);

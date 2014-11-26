@@ -36,13 +36,13 @@ public: void Exiting();
 		void ProcessInput(Bengine::InputManager _inputManager);
 		void CreateBox2dWorld();
 
+		static b2World* world;
 
 private:
 	std::vector<Character*> _characters;
 	std::shared_ptr<GameStateManager> gameStateManager;
 	glm::vec4 startRect;
 	int** levelArray;
-	b2World* world;
 	std::vector<GameObject*> objects;
 	b2Body* m_groundBody;
 	WrekTangle wrek;

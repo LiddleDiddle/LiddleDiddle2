@@ -159,6 +159,9 @@
     <ClCompile Include="BasicArrowState.cpp">
       <Filter>Character</Filter>
     </ClCompile>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment4GameState.h">
@@ -301,6 +304,9 @@
     </ClInclude>
     <ClInclude Include="BasicState.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

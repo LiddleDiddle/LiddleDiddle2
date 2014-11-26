@@ -86,6 +86,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="Assignment4GameState.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="BasicArrowState.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="WrekTangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrow.h" />
     <ClInclude Include="Assignment4GameState.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="BasicArrowState.h" />
