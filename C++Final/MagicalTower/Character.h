@@ -11,6 +11,7 @@ public:
 	virtual void update(float timeStep) {}
 	virtual void draw(Bengine::SpriteBatch& spriteBatch) {}
 	int getEntityType() { return entityType; }
+	void kill() { _alive = false; }
 protected:
 	CharacterState* _currentState;
 	CharacterState* _mainWeaponState;

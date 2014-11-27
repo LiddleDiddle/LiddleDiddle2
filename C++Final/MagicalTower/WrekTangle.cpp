@@ -1,6 +1,8 @@
 #include "WrekTangle.h"
 #include "StandingState.h"
 #include "BasicArrowState.h"
+#include "LevelState.h"
+#include "ManaOrb.h"
 
 WrekTangle::WrekTangle(){
 
@@ -45,29 +47,41 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_mainWeaponState->enter();
 	_controllerNumber = controllerNumber;
 	entityType = EntityEnum::CHARACTER;
+	justDied = true;
 }
 
 void WrekTangle::update(float timeStep){
-
-	CharacterState* tempState = _currentState->update(*_body, _controllerNumber);
-	_mainWeaponState->update(*_body, _controllerNumber);
-
-	if (tempState != NULL)
-	{
-		_currentState->exit();
-		delete _currentState;
-		_currentState = tempState;
-		_currentState->enter();
-	}
-
-
 	if (_alive)
 	{
-		glm::clamp(_mana, 0, 100);
+		CharacterState* tempState = _currentState->update(*_body, _controllerNumber);
+		_mainWeaponState->update(*_body, _controllerNumber);
+
+		if (tempState != NULL)
+		{
+			_currentState->exit();
+			delete _currentState;
+			_currentState = tempState;
+			_currentState->enter();
+		}
 	}
+	else
+	{
+		if (justDied)
+		{
+			LevelState::items.push_back(new ManaOrb(_body->GetPosition().x, _body->GetPosition().y, _mana));
+		}
+		else
+		{
+			
+		}
+	}
+	glm::clamp(_mana, 0, 100);
 }
 
 void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
-	_currentState->draw(spriteBatch, _body);
-	_mainWeaponState->draw(spriteBatch,_body);
+	if (_alive)
+	{
+		_currentState->draw(spriteBatch, _body);
+		_mainWeaponState->draw(spriteBatch, _body);
+	}
 }

@@ -15,6 +15,7 @@ public:
 	void enter();
 	void exit();
 private:
+	float _manaCost;
 	float _rotation;
 	float _magnitude;
 	float arrowSpeed;

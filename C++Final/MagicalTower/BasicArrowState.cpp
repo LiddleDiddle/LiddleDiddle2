@@ -17,7 +17,7 @@ CharacterState* BasicArrowState::update(b2Body &body, int controllerNumber){
 		if (arrows[i]->getContacting() > 0)
 		{
 
-			LevelState::items.push_back(new ManaOrb(arrows[i]->getPos().x,arrows[i]->getPos().y, 25.0f));
+			LevelState::items.push_back(new ManaOrb(arrows[i]->getPos().x,arrows[i]->getPos().y, _manaCost));
 			delete arrows[i];
 			arrows.erase(arrows.begin() + i);
 			i = 0;
@@ -64,6 +64,7 @@ void BasicArrowState::processInputs(int controllerNumber){
 }
 
 void BasicArrowState::enter(){
+	_manaCost = 25.0f;
 	_texture = Bengine::ResourceManager::getTexture("Textures/Character/arrow.png");
 	_rotation = 0;
 }

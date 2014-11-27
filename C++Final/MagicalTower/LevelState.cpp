@@ -58,6 +58,11 @@ void LevelState::Entered() {
 
 void LevelState::Exiting() {
 	std::cout << "_______________ is exiting" << std::endl;  //change this
+	for (int i = 0; i < items.size(); i++)
+	{
+		delete items[i];
+	}
+	items.clear();
 }
 
 void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager) {

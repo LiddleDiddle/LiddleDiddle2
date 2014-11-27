@@ -60,6 +60,7 @@ void StandingState::processInputs(int controllerNumber){
 
 void StandingState::enter(){
 	_texture = Bengine::ResourceManager::getTexture("Textures/madokis/standing.png");
+	
 }
 
 void StandingState::exit(){
