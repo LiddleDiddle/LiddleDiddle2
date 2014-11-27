@@ -1,5 +1,6 @@
 #pragma once
 #include "CharacterState.h"
+#include "MyContactListener.h"
 #include "Arrow.h"
 
 class BasicArrowState :
@@ -17,6 +18,6 @@ private:
 	float _rotation;
 	float _magnitude;
 	float arrowSpeed;
-	std::vector<Arrow> arrows;
+	std::vector<Arrow*> arrows;
 };
 

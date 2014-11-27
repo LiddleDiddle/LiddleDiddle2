@@ -4,9 +4,12 @@
 
 Arrow::~Arrow()
 {
+
+	LevelState::world->DestroyBody(body);
 }
 
-Arrow::Arrow(float x, float y, b2Vec2 linearVelocity)
+Arrow::Arrow(float x, float y, b2Vec2 linearVelocity) : 
+	_contacting(0)
 {
 	// Circle
 	b2CircleShape shape;
@@ -23,13 +26,21 @@ Arrow::Arrow(float x, float y, b2Vec2 linearVelocity)
 	bd.position.Set(x, y);
 	body = LevelState::world->CreateBody(&bd);
 	body->CreateFixture(&fd);
+	body->SetUserData(this);
 	body->ApplyForceToCenter(linearVelocity,true);
+	entityType = EntityEnum::PROJECTILE;
 }
 
 void Arrow::draw(Bengine::SpriteBatch& spriteBatch)
 {
-	b2Vec2 position = body->GetPosition();
-	float32 angle = -(atan2(body->GetLinearVelocity().x , body->GetLinearVelocity().y) - 3.14 / 2);
+	if (_contacting < 1)
+	{
+		position = body->GetPosition();
+		angle = -(atan2(body->GetLinearVelocity().x, body->GetLinearVelocity().y) - 3.14 / 2);
+	}
+
+	
+
 
 	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 	static Bengine::GLTexture spook = Bengine::ResourceManager::getTexture("Textures/arrow.png");

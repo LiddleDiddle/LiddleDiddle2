@@ -15,6 +15,7 @@
 #define CAMERA TheMainGame::Instance()->_camera
 
 b2World* LevelState::world;
+std::vector<Item*> LevelState::items;
 
 LevelState::LevelState(const std::shared_ptr<GameStateManager> &gameStateManager) :
 gameStateManager(gameStateManager)
@@ -71,7 +72,10 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 	int32 positionIterations = 2;
 	world->Step(elapsedTime, velocityIterations, positionIterations);
 
-
+	for (int i = 0; i < items.size(); i++)
+	{
+		items[i]->update(elapsedTime);
+	}
 }
 
 void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
@@ -92,6 +96,11 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 		_characters[i]->draw(spriteBatch);
 	}
 
+	for (int i = 0; i < items.size(); i++)
+	{
+		items[i]->draw(spriteBatch);
+	}
+
 	for (int i = 0; i < HEIGHT; ++i)
 	{
 		for (int j = 0; j < WIDTH; ++j)
@@ -110,7 +119,6 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 			}
 		}
 	}
-
 }
 
 void LevelState::ProcessInput(Bengine::InputManager inputManager){
@@ -137,4 +145,6 @@ void LevelState::CreateBox2dWorld()
 
 	b2BodyDef bodyDef;
 	m_groundBody = world->CreateBody(&bodyDef);
+
+	LevelState::world->SetContactListener(&myContactListenerInstance);
 }

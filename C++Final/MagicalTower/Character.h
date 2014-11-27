@@ -4,12 +4,13 @@
 #include <Bengine\ResourceManager.h>
 #include "CharacterState.h"
 #include <Box2D/Box2D.h>
-
-class Character{
+#include "Entity.h"
+class Character : public Entity{
 public:
 	virtual void init(int controllerNumber, float x, float y, b2World* world) {}
 	virtual void update(float timeStep) {}
 	virtual void draw(Bengine::SpriteBatch& spriteBatch) {}
+	int getEntityType() { return entityType; }
 protected:
 	CharacterState* _currentState;
 	CharacterState* _mainWeaponState;

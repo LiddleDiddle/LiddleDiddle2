@@ -19,6 +19,9 @@
     <Filter Include="Character">
       <UniqueIdentifier>{1569545a-7484-411f-8b07-5c95aea5b524}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Items">
+      <UniqueIdentifier>{15befbb1-f40f-44dc-9e71-defd6a4537ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment4GameState.cpp">
@@ -161,6 +164,15 @@
     </ClCompile>
     <ClCompile Include="Arrow.cpp">
       <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="MyContactListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManaOrb.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Items</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +319,18 @@
     </ClInclude>
     <ClInclude Include="Arrow.h">
       <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="MyContactListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ManaOrb.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Items</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

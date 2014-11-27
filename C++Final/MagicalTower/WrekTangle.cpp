@@ -44,6 +44,7 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_mainWeaponState = new BasicArrowState;
 	_mainWeaponState->enter();
 	_controllerNumber = controllerNumber;
+	entityType = EntityEnum::CHARACTER;
 }
 
 void WrekTangle::update(float timeStep){

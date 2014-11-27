@@ -10,8 +10,9 @@
 #include <memory>
 #include <Box2D/Box2D.h>
 #include "WrekTangle.h"
-
-
+#include "MyContactListener.h"
+#include "Item.h"
+#include "ManaOrb.h"
 
 class LevelState : public GameState, public virtual Updateable, public virtual Drawable
 {
@@ -26,17 +27,17 @@ public:
 	void Entered();
 
 	/// <summary>Called when the game state is about to be exited</summary>
-public: void Exiting();
+	void Exiting();
 
-		/// <summary>Updates the time in the game state's simulation</summary>
-		/// <param name="elapsedTime">Time by which to advance the simulation</param>
-		void Update(float elapsedTime, Bengine::InputManager& inputManager);
+	/// <summary>Updates the time in the game state's simulation</summary>
+	/// <param name="elapsedTime">Time by which to advance the simulation</param>
+	void Update(float elapsedTime, Bengine::InputManager& inputManager);
 
-		void Draw(Bengine::SpriteBatch& spriteBatch);
-		void ProcessInput(Bengine::InputManager _inputManager);
-		void CreateBox2dWorld();
-
-		static b2World* world;
+	void Draw(Bengine::SpriteBatch& spriteBatch);
+	void ProcessInput(Bengine::InputManager _inputManager);
+	void CreateBox2dWorld();
+	static b2World* world;
+	static std::vector<Item*> items;
 
 private:
 	std::vector<Character*> _characters;
@@ -46,4 +47,6 @@ private:
 	std::vector<GameObject*> objects;
 	b2Body* m_groundBody;
 	WrekTangle wrek;
+
+	MyContactListener myContactListenerInstance;
 };

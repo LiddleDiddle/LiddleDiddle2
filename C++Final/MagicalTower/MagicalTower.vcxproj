@@ -93,6 +93,9 @@
     <ClCompile Include="BasicState.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ManaOrb.cpp" />
+    <ClCompile Include="MyContactListener.cpp" />
     <ClCompile Include="ControllerMenuState.cpp" />
     <ClCompile Include="DefaultGameStateManager.cpp" />
     <ClCompile Include="Drawable.cpp" />
@@ -144,6 +147,10 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterState.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ManaOrb.h" />
+    <ClInclude Include="MyContactListener.h" />
     <ClInclude Include="ControllerMenuState.h" />
     <ClInclude Include="DefaultGameStateManager.h" />
     <ClInclude Include="Drawable.h" />
