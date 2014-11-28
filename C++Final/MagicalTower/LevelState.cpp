@@ -4,10 +4,8 @@
 #include <Bengine/ResourceManager.h>
 #include "MainGame.h"
 #include "Level.h"
-#include "LevelGround.h"
-#include "LevelMiddleWall.h"
-#include "LevelPlatform.h"
 #include "LevelWall.h"
+#include "Ball.h"
 
 
 #define WIDTH 32
@@ -21,7 +19,7 @@ LevelState::LevelState(const std::shared_ptr<GameStateManager> &gameStateManager
 gameStateManager(gameStateManager)
 {
 	
-	Level* level = new Level("Hardcoded Level", "Level001.png", "Level001.xml");
+	Level* level = new Level("Hardcoded Level", "LevelFinal.png", "LevelFinal.xml");
 	levelArray = level->LoadLevel();
 }
 
@@ -91,9 +89,18 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 	color.g = 255;
 	color.b = 255;
 	color.a = 255;
-	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Assignment 4/Box.png");
-	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tile2.png");
-	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tile3.png");
+	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile001.png");
+	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile002.png");
+	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile003.png");
+	static Bengine::GLTexture tile4 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile004.png");
+	static Bengine::GLTexture tile5 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile005.png");
+	static Bengine::GLTexture tile6 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile006.png");
+	static Bengine::GLTexture tile7 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile007.png");
+	static Bengine::GLTexture tile8 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile008.png");
+	static Bengine::GLTexture tile9 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile009.png");
+	static Bengine::GLTexture tile10 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile010.png");
+	static Bengine::GLTexture tile11 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile011.png");
+	static Bengine::GLTexture tile12 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile012.png");
 
 	
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
@@ -122,6 +129,42 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 			{
 				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile3.id, 0.0f, color);
 			}
+			else if (levelArray[i][j] == 4)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile4.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 5)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile5.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 6)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile6.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 7)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile7.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 8)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile8.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 9)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile9.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 10)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile10.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 11)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile11.id, 0.0f, color);
+			}
+			else if (levelArray[i][j] == 12)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile12.id, 0.0f, color);
+			}
 		}
 	}
 }
@@ -136,17 +179,34 @@ void LevelState::CreateBox2dWorld()
 
 	world = new b2World(gravity);
 
-	objects.push_back(new LevelGround(world, 15.5, 0.5));
-	objects.push_back(new LevelGround(world, 15.5, 17.5));
-
-	objects.push_back(new LevelWall(world, 0.5, 8.5));
-	objects.push_back(new LevelWall(world, 31.5, 8.5));
-
-	objects.push_back(new LevelPlatform(world, 8.5, 9.5));
-	objects.push_back(new LevelPlatform(world, 24.5, 9.5));
-	objects.push_back(new LevelPlatform(world, 16.5, 4.5));
-
-	objects.push_back(new LevelMiddleWall(world, 16.5, 14.));
+	objects.push_back(new LevelWall(world, 0.5, 16.5, 0.5, 1.5));
+	objects.push_back(new LevelWall(world, 5.0, 17.5, 4.0, 0.5));
+	objects.push_back(new LevelWall(world, 10.0, 15.5, 1.0, 2.5));
+	objects.push_back(new LevelWall(world, 12.5, 13.5, 1.5, 0.5));
+	objects.push_back(new LevelWall(world, 16.0, 17.5, 2.0, 0.5));
+	objects.push_back(new LevelWall(world, 19.5, 13.5, 1.5, 0.5));
+	objects.push_back(new LevelWall(world, 22.0, 15.5, 1.0, 2.5));
+	objects.push_back(new LevelWall(world, 27.0, 17.5, 4.0, 0.5));
+	objects.push_back(new LevelWall(world, 31.5, 16.5, 0.5, 1.5));
+	
+	objects.push_back(new LevelWall(world, 1.0, 10.0, 1.0, 2.0));
+	objects.push_back(new LevelWall(world, 3.5, 8.5, 1.5, 0.5));
+	objects.push_back(new LevelWall(world, 6.0, 4.5, 2.0, 0.5));
+	objects.push_back(new LevelWall(world, 9.0, 7.0, 1.0, 3.0));
+	objects.push_back(new LevelWall(world, 11.0, 7.5, 1.0, 0.5));
+	objects.push_back(new LevelWall(world, 21.0, 7.5, 1.0, 0.5));
+	objects.push_back(new LevelWall(world, 23.0, 7.0, 1.0, 3.0));
+	objects.push_back(new LevelWall(world, 26.0, 4.5, 2.0, 0.5));
+	objects.push_back(new LevelWall(world, 28.5, 8.5, 1.5, 0.5));
+	objects.push_back(new LevelWall(world, 31.0, 10.0, 1.0, 2.0));
+	
+	objects.push_back(new LevelWall(world, 0.5, 4.5, 0.5, 3.5));
+	objects.push_back(new LevelWall(world, 5.5, 0.5, 5.5, 0.5));
+	objects.push_back(new LevelWall(world, 16.0, 0.5, 2.0, 0.5));
+	objects.push_back(new LevelWall(world, 16.0, 2.5, 1.0, 1.5));
+	objects.push_back(new LevelWall(world, 26.5, 0.5, 5.5, 0.5));
+	objects.push_back(new LevelWall(world, 31.5, 4.5, 0.5, 3.5));
+	
 
 	b2BodyDef bodyDef;
 	m_groundBody = world->CreateBody(&bodyDef);

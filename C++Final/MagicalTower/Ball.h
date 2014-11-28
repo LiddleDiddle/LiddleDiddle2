@@ -8,7 +8,7 @@ public:
 	Ball(b2World* world, float x, float y);
 	~Ball(void);
 
-	void CreateBox2dObject(float x, float y);
+	void CreateBox2dObject(float x, float y, float w, float h);
 	void Draw(Bengine::SpriteBatch& spriteBatch);
 	void addForceCenter(float x, float y);
 };

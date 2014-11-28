@@ -6,14 +6,14 @@
 Ball::Ball(b2World* world, float x, float y)
 	: GameObject(world)
 {
-	CreateBox2dObject(x, y);
+	CreateBox2dObject(x, y, 0, 0);
 }
 Ball::~Ball(void)
 {
 
 }
 
-void Ball::CreateBox2dObject(float x, float y)
+void Ball::CreateBox2dObject(float x, float y, float w, float h)
 {
 	// Circle
 	b2CircleShape shape;

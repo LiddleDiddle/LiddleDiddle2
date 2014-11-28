@@ -29,7 +29,7 @@ void TilemapEditorState::Entered()
 	level = loader.LoadLevel(file);
 	mousePressed = false;
 	changed = false;
-	numTiles = 3;
+	numTiles = 12;
 	sameTile = 0;
 	multipleTilesChanged = false;	
 	firstRun = true;
@@ -63,9 +63,18 @@ void TilemapEditorState::Draw(Bengine::SpriteBatch& spriteBatch)
 		break;
 	}
 
-	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Assignment 4/Box.png");
-	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tile2.png");
-	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tile3.png");
+	static Bengine::GLTexture tile1 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile001.png");
+	static Bengine::GLTexture tile2 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile002.png");
+	static Bengine::GLTexture tile3 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile003.png");
+	static Bengine::GLTexture tile4 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile004.png");
+	static Bengine::GLTexture tile5 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile005.png");
+	static Bengine::GLTexture tile6 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile006.png");
+	static Bengine::GLTexture tile7 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile007.png");
+	static Bengine::GLTexture tile8 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile008.png");
+	static Bengine::GLTexture tile9 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile009.png");
+	static Bengine::GLTexture tile10 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile010.png");
+	static Bengine::GLTexture tile11 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile011.png");
+	static Bengine::GLTexture tile12 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile012.png");
 
 	grids[0] = Bengine::ResourceManager::getTexture("Textures/grid1.png");
 	grids[1] = Bengine::ResourceManager::getTexture("Textures/grid2.png");
@@ -108,6 +117,42 @@ void TilemapEditorState::Draw(Bengine::SpriteBatch& spriteBatch)
 			else if (level[i][j] == 3)
 			{
 				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x/WIDTH/2 + j*CAMERA.getScreenDimensions().x/WIDTH,CAMERA.getScreenDimensions().y/HEIGHT/2 + i*CAMERA.getScreenDimensions().y/HEIGHT,CAMERA.getScreenDimensions().x/WIDTH, CAMERA.getScreenDimensions().y/HEIGHT), 0.0f, uv, tile3.id, 0.0f, color);
+			}
+			else if (level[i][j] == 4)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile4.id, 0.0f, color);
+			}
+			else if (level[i][j] == 5)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile5.id, 0.0f, color);
+			}
+			else if (level[i][j] == 6)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile6.id, 0.0f, color);
+			}
+			else if (level[i][j] == 7)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile7.id, 0.0f, color);
+			}
+			else if (level[i][j] == 8)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile8.id, 0.0f, color);
+			}
+			else if (level[i][j] == 9)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile9.id, 0.0f, color);
+			}
+			else if (level[i][j] == 10)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile10.id, 0.0f, color);
+			}
+			else if (level[i][j] == 11)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile11.id, 0.0f, color);
+			}
+			else if (level[i][j] == 12)
+			{
+				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile12.id, 0.0f, color);
 			}
 		}
 	}

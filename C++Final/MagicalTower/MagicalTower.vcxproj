@@ -109,10 +109,7 @@
     <ClCompile Include="IntroGameState.cpp" />
     <ClCompile Include="JumpingState.cpp" />
     <ClCompile Include="Level.cpp" />
-    <ClCompile Include="LevelGround.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
-    <ClCompile Include="LevelMiddleWall.cpp" />
-    <ClCompile Include="LevelPlatform.cpp" />
     <ClCompile Include="LevelState.cpp" />
     <ClCompile Include="LevelWall.cpp" />
     <ClCompile Include="main.cpp" />
@@ -164,10 +161,7 @@
     <ClInclude Include="IntroGameState.h" />
     <ClInclude Include="JumpingState.h" />
     <ClInclude Include="Level.h" />
-    <ClInclude Include="LevelGround.h" />
     <ClInclude Include="LevelLoader.h" />
-    <ClInclude Include="LevelMiddleWall.h" />
-    <ClInclude Include="LevelPlatform.h" />
     <ClInclude Include="LevelState.h" />
     <ClInclude Include="LevelWall.h" />
     <ClInclude Include="MainGame.h" />
