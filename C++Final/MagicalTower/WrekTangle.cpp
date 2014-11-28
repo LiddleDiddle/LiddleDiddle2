@@ -16,6 +16,7 @@ WrekTangle::~WrekTangle(){
 
 void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_world = world;
+
 	
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
@@ -46,15 +47,15 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 	_mainWeaponState = new BasicArrowState;
 	_mainWeaponState->enter();
 	_controllerNumber = controllerNumber;
-	entityType = EntityEnum::CHARACTER;
 	justDied = true;
+	_body->SetUserData(this);
 }
 
 void WrekTangle::update(float timeStep){
 	if (_alive)
 	{
 		CharacterState* tempState = _currentState->update(*_body, _controllerNumber);
-		_mainWeaponState->update(*_body, _controllerNumber);
+		WeaponState* tempWeap =_mainWeaponState->update(_body->GetPosition().x, _body->GetPosition().y, _controllerNumber);
 
 		if (tempState != NULL)
 		{
@@ -63,12 +64,22 @@ void WrekTangle::update(float timeStep){
 			_currentState = tempState;
 			_currentState->enter();
 		}
+
+		if (tempWeap != NULL)
+		{
+			_mainWeaponState->exit();
+			delete _mainWeaponState;
+			_mainWeaponState = tempWeap;
+			_mainWeaponState->enter();
+		}
 	}
 	else
 	{
 		if (justDied)
 		{
 			LevelState::items.push_back(new ManaOrb(_body->GetPosition().x, _body->GetPosition().y, _mana));
+			justDied = false;
+			_body->SetTransform(b2Vec2(-1, -1), 0);
 		}
 		else
 		{
@@ -82,6 +93,6 @@ void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
 	if (_alive)
 	{
 		_currentState->draw(spriteBatch, _body);
-		_mainWeaponState->draw(spriteBatch, _body);
+		_mainWeaponState->draw(spriteBatch,_body->GetPosition().x, _body->GetPosition().y);
 	}
 }

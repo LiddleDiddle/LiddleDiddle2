@@ -332,5 +332,8 @@
     <ClInclude Include="Item.h">
       <Filter>Items</Filter>
     </ClInclude>
+    <ClInclude Include="WeaponState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

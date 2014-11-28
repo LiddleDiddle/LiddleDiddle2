@@ -17,9 +17,11 @@ public:
 	void startContact() { _contacting++; }
 	void endContact() { _contacting--; }
 	bool getContacting() { return _contacting; }
-	int getEntityType() { return entityType; }
+	int getEntityType() { return EntityEnum::PROJECTILE; }
 	b2Vec2 getPos() { return body->GetPosition(); }
 	b2Body* body;
+
+	
 private:
 	int _contacting;
 	b2Vec2 position;

@@ -1,16 +1,15 @@
 #pragma once
-#include "CharacterState.h"
-#include "MyContactListener.h"
+#include "WeaponState.h"
 #include "Arrow.h"
 
 class BasicArrowState :
-	public CharacterState
+	public WeaponState
 {
 public:
 	BasicArrowState();
 	~BasicArrowState();
-	CharacterState* update(b2Body &body, int controllerNumber);
-	void draw(Bengine::SpriteBatch& spriteBatch, b2Body *body);
+	WeaponState* update(float x, float y, int controllerNumber);
+	void draw(Bengine::SpriteBatch& spriteBatch, float x, float y);
 	void processInputs(int controllerNumber);
 	void enter();
 	void exit();

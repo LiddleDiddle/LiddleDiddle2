@@ -10,7 +10,7 @@ BasicArrowState::BasicArrowState()
 BasicArrowState::~BasicArrowState()
 {
 }
-CharacterState* BasicArrowState::update(b2Body &body, int controllerNumber){
+WeaponState* BasicArrowState::update(float x, float y, int controllerNumber){
 
 	for (int i = 0; i < arrows.size(); i++)
 	{
@@ -33,7 +33,7 @@ CharacterState* BasicArrowState::update(b2Body &body, int controllerNumber){
 	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) && _magnitude >= 0.2)
 	{
 		glm::vec2 temp = glm::normalize(rightStick);
-		arrows.push_back(new Arrow(body.GetPosition().x + (temp.x * 1.5f), body.GetPosition().y + (temp.y * 1.7f), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed)));
+		arrows.push_back(new Arrow(x + (temp.x * 1.5f),y + (temp.y * 1.7f), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed)));
 	}
 
 	
@@ -41,13 +41,13 @@ CharacterState* BasicArrowState::update(b2Body &body, int controllerNumber){
 	return NULL;
 }
 
-void BasicArrowState::draw(Bengine::SpriteBatch& spriteBatch, b2Body *body)
+void BasicArrowState::draw(Bengine::SpriteBatch& spriteBatch, float x, float y)
 {
 	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 	Bengine::ColorRGBA8 color(255, 255, 255, 255);
 	if (_magnitude >= 0.2)
 	{
-		spriteBatch.draw(glm::vec4(body->GetPosition().x* CAMERA.getScreenDimensions().x / 32, body->GetPosition().y * CAMERA.getScreenDimensions().y / 18, CAMERA.getScreenDimensions().x / 32, CAMERA.getScreenDimensions().y / 18 * 4), _rotation, uv, _texture.id, 0.0f, color);
+		spriteBatch.draw(glm::vec4(x* CAMERA.getScreenDimensions().x / 32, y * CAMERA.getScreenDimensions().y / 18, CAMERA.getScreenDimensions().x / 32, CAMERA.getScreenDimensions().y / 18 * 4), _rotation, uv, _texture.id, 0.0f, color);
 	}
 	for (int i = 0; i < arrows.size(); i++)
 	{
@@ -67,6 +67,7 @@ void BasicArrowState::enter(){
 	_manaCost = 25.0f;
 	_texture = Bengine::ResourceManager::getTexture("Textures/Character/arrow.png");
 	_rotation = 0;
+	
 }
 
 void BasicArrowState::exit(){

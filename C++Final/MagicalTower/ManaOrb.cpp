@@ -20,7 +20,7 @@ ManaOrb::ManaOrb(float x, float y, float mana)
 	body = LevelState::world->CreateBody(&bd);
 	body->CreateFixture(&fd);
 	body->SetUserData(this);
-	entityType = EntityEnum::PROJECTILE;
+	itemType = ItemEnum::MANA_ORB;
 }
 
 

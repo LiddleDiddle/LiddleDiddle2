@@ -4,7 +4,7 @@
 #include "Arrow.h"
 #include "Entity.h"
 #include "Character.h"
-
+#include <iostream>
 class MyContactListener : public b2ContactListener
 {
 public:
@@ -22,41 +22,44 @@ public:
 
 		if (bodyUserDataA && bodyUserDataB)
 		{
-			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::CHARACTER && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE)
-			{
-				printf("yolo\n");
-				static_cast<Character*>(bodyUserDataA)->kill();
-				static_cast<Arrow*>(bodyUserDataB)->startContact();
-			}
-			
-			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::CHARACTER)
-			{
-				printf("yolo\n");
-				static_cast<Arrow*>(bodyUserDataA)->startContact();
-				static_cast<Character*>(bodyUserDataB)->kill();
-			}
-		}
-
-		if (bodyUserDataA && bodyUserDataB)
-		{
-			if (static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE);
+			//arrow arrow collision do nothing
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE)
 			{
 				return;
 			}
+			//arrow character collision
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::CHARACTER)
+			{
+				static_cast<Arrow*>(bodyUserDataA)->startContact();
+				static_cast<Character*>(bodyUserDataB)->kill();
+			}
+			//character arrow collision
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::CHARACTER && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE)
+			{
+				static_cast<Character*>(bodyUserDataA)->kill();
+				static_cast<Arrow*>(bodyUserDataB)->startContact();
+			}
 		}
 
-		
-		
 		if (bodyUserDataA)
 		{
-			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE);
+			printf("type A: %i\n", static_cast<Entity*>(bodyUserDataA)->getEntityType());
+		}
+
+		if (bodyUserDataB)
+		{
+			printf("type B: %i\n", static_cast<Entity*>(bodyUserDataB)->getEntityType());
+		}
+		if (bodyUserDataA)
+		{
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE)
 			{
 				static_cast<Arrow*>(bodyUserDataA)->startContact();
 			}
 		}
 		if (bodyUserDataB)
 		{
-			if (static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE);
+			if (static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE)
 			{
 				static_cast<Arrow*>(bodyUserDataB)->startContact();
 			}

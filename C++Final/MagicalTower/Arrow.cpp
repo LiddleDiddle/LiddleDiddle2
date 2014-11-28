@@ -28,7 +28,6 @@ Arrow::Arrow(float x, float y, b2Vec2 linearVelocity) :
 	body->CreateFixture(&fd);
 	body->SetUserData(this);
 	body->ApplyForceToCenter(linearVelocity,true);
-	entityType = EntityEnum::PROJECTILE;
 }
 
 void Arrow::draw(Bengine::SpriteBatch& spriteBatch)
