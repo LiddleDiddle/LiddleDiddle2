@@ -8,7 +8,7 @@
 #include "GeneralManager.h"
 #include "ControllerMenuState.h"
 #include "StartScreenState.h"
-
+#include "MainGame.h"
 #define MENUCONTROLLER TheGeneralManager::Instance()->MenuController
 
 MainMenuState::MainMenuState(const std::shared_ptr<GameStateManager> &gameStateManager) :
@@ -23,7 +23,7 @@ void MainMenuState::Entered() {
 	rects = new glm::vec4[7];
 	for (int i = 0; i < 7; i++)
 	{
-		rects[i] = glm::vec4(1000,720 - (i + 1) * 45 * 2, 200, 50);
+		rects[i] = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 1.28, MainGame::Instance()->_camera.getScreenDimensions().y - (i + 1) * MainGame::Instance()->_camera.getScreenDimensions().y / 16 * 2, MainGame::Instance()->_camera.getScreenDimensions().x / 6.4, MainGame::Instance()->_camera.getScreenDimensions().y / 14.4);
 	}
 	_hover = 0;
 	
@@ -58,7 +58,8 @@ void MainMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 
 	
 
-	glm::vec4 rectangle = glm::vec4(640,360,1280,720);
+	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
+
 	if(_hover == 0)
 		spriteBatch.draw(rects[0],0,uv,singlePlayer.id,0,hoverColor);
 	else
@@ -90,9 +91,13 @@ void MainMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 }
 
 void MainMenuState::checkCollision(Bengine::InputManager inputManager){
+	
+	glm::vec2 mouseCoords = inputManager.getMouseCoords();
+	mouseCoords = TheMainGame::Instance()->_camera.convertScreenToWorld(mouseCoords);
+
 	for (int i = 0; i < 7; i++)
 	{
-		if(inputManager.getMouseCoords().x < rects[i].x + 100 &&  inputManager.getMouseCoords().x > rects[i].x - 100 && 720 - inputManager.getMouseCoords().y < rects[i].y + 25 && 720 - inputManager.getMouseCoords().y > rects[i].y - 25 )
+		if (mouseCoords.x < rects[i].x + rects[i][2] / 2 && mouseCoords.x > rects[i].x - rects[i][2] / 2 && mouseCoords.y < rects[i].y + rects[i][3] / 2 && mouseCoords.y > rects[i].y - rects[i][3] / 2)
 		{
 			if (inputManager.isKeyDown(SDL_BUTTON_LEFT))
 			{

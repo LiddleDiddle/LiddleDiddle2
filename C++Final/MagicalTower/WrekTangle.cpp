@@ -65,10 +65,6 @@ void WrekTangle::init(int controllerNumber, float x, float y, b2World* world) {
 }
 
 void WrekTangle::update(float timeStep){
-
-
-	printf("friction: %f\n", _body->GetFixtureList()->GetFriction());
-
 	if (_alive)
 	{
 		if (_mana == previousMana)

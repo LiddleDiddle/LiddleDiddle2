@@ -4,6 +4,7 @@
 #include <SDL/SDL.h>
 #include <Bengine/ResourceManager.h>
 #include "GeneralManager.h"
+#include "MainGame.h"
 
 StartScreenState::StartScreenState(const std::shared_ptr<GameStateManager> &gameStateManager) :
 	gameStateManager(gameStateManager) 
@@ -54,7 +55,8 @@ void StartScreenState::Draw(Bengine::SpriteBatch& spriteBatch)
 	color.a = 255;
 
 	static Bengine::GLTexture bg = Bengine::ResourceManager::getTexture("Textures/StartMenu/bg.png");
+	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
 
 
-	spriteBatch.draw(glm::vec4(1280/2,720/2,1280,720), 0, uv, bg.id, 0.0f, color);
+	spriteBatch.draw(rectangle, 0, uv, bg.id, 0.0f, color);
 }

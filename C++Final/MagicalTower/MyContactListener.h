@@ -61,16 +61,6 @@ public:
 				}
 			}
 		}
-
-		if (bodyUserDataA)
-		{
-			printf("type A: %i\n", static_cast<Entity*>(bodyUserDataA)->getEntityType());
-		}
-
-		if (bodyUserDataB)
-		{
-			printf("type B: %i\n", static_cast<Entity*>(bodyUserDataB)->getEntityType());
-		}
 		if (bodyUserDataA)
 		{
 			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE)

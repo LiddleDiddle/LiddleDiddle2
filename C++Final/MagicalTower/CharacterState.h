@@ -16,5 +16,10 @@ public:
 	virtual void enter() {};
 	virtual void exit() {};
 protected:
+	glm::vec4 uv;
+	int frames;
+	float frameRate;
+	float frameTimer;
+	float currentFrame;
 	Bengine::GLTexture _texture;
 };

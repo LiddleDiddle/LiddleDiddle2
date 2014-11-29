@@ -12,5 +12,6 @@ public:
 	void enter();
 	void exit();
 private:
+
 };
 

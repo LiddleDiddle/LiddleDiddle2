@@ -1,4 +1,6 @@
-﻿  StandingState.cpp
-  JumpingState.cpp
-  Generating Code...
+﻿  MultiCharacterSelectState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(190): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(194): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(198): warning C4305: 'argument' : truncation from 'double' to 'float'
   MagicalTower.vcxproj -> C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.exe

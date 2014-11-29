@@ -21,7 +21,7 @@ CharacterState* StandingState::update(b2Body &body, int controllerNumber, int co
 		return new JumpingState;
 	}
 
-	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x > 0.05f || GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x < -0.05f)
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x > 0.1f || GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x < -0.1f)
 	{
 		body.ApplyForceToCenter(b2Vec2(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getLeftStick().x* 500,0), true);
 	}
@@ -35,14 +35,41 @@ CharacterState* StandingState::update(b2Body &body, int controllerNumber, int co
 		body.SetLinearVelocity(b2Vec2(-3, body.GetLinearVelocity().y));
 	}
 
+	if (body.GetLinearVelocity().x <= 0.3 && body.GetLinearVelocity().x >= -0.3)
+	{
+		_texture = Bengine::ResourceManager::getTexture("Textures/madokis/idle.png");
+		frameTimer += 0.01666666;
+		if (frameTimer >= 0.15)
+		{
+			currentFrame++;
+			if (currentFrame > frames)
+				currentFrame = 0;
+			uv = glm::vec4(currentFrame / frames, 0, 1.0 / frames, 1.0f);
+			frameTimer = 0;
+		}
+	}
+	else
+	{
+		_texture = Bengine::ResourceManager::getTexture("Textures/madokis/run.png");
+		frameTimer += 0.01666666;
+		if (frameTimer >= 0.1)
+		{
+			currentFrame++;
+			if (currentFrame > frames)
+				currentFrame = 0;
+			if (body.GetLinearVelocity().x >= 0.3)
+			uv = glm::vec4(currentFrame / frames, 0, 1.0 / frames, 1.0f);
+			if (body.GetLinearVelocity().x <= -0.3)
+				uv = glm::vec4(currentFrame / frames, 0, -1.0 / frames, 1.0f);
+			frameTimer = 0;
+		}
+	}
 	
-
 	return NULL;
 }
 
 void StandingState::draw(Bengine::SpriteBatch& spriteBatch, b2Body *body)
 {
-	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
 
 	Bengine::ColorRGBA8 color(255, 255, 255, 255);
 	
@@ -61,7 +88,12 @@ void StandingState::processInputs(int controllerNumber){
 }
 
 void StandingState::enter(){
-	_texture = Bengine::ResourceManager::getTexture("Textures/madokis/standing.png");
+	_texture = Bengine::ResourceManager::getTexture("Textures/madokis/idle.png");
+	frames = 8;
+	frameRate = 0.15f;
+	frameTimer = 0;
+	currentFrame = 0;
+	uv = glm::vec4(0.0f, 0.0f, 1.0f / frames, 1.0f);
 }
 
 void StandingState::exit(){

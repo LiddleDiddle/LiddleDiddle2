@@ -26,10 +26,13 @@ MultiCharacterSelectState::~MultiCharacterSelectState()
 
 void MultiCharacterSelectState::Entered() {
     std::cout << "MainMenuState has been entered" << std::endl;
-	_one = glm::vec4(160,720/2,320,720);
-	_two = glm::vec4(160+320,720/2,320,720);
-	_three = glm::vec4(160+320*2,720/2,320,720);
-	_four = glm::vec4(160+320*3,720/2,320,720);
+
+	float quarterScreen = TheMainGame::Instance()->_camera.getScreenDimensions().x / 4;
+
+	_one = glm::vec4(quarterScreen/2, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, quarterScreen, TheMainGame::Instance()->_camera.getScreenDimensions().y);
+	_two = glm::vec4(quarterScreen / 2 + quarterScreen, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, quarterScreen, TheMainGame::Instance()->_camera.getScreenDimensions().y);
+	_three = glm::vec4(quarterScreen / 2 + quarterScreen * 2, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, quarterScreen, TheMainGame::Instance()->_camera.getScreenDimensions().y);
+	_four = glm::vec4(quarterScreen + quarterScreen * 3, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, quarterScreen, TheMainGame::Instance()->_camera.getScreenDimensions().y);
 	_mousePressed = true;
 
 	_ready = new bool[4];
@@ -155,11 +158,11 @@ void MultiCharacterSelectState::Draw(Bengine::SpriteBatch& spriteBatch)
 	}
 	for (int i = 0; i < 4; i++)
 	{
-		spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, border.id, 0.0f, color);
+		spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, border.id, 0.0f, color);
 		if(!_joined[i])
 		{
-			spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, bg.id, 0.0f, color);
-			spriteBatch.draw(glm::vec4(160 + 320 * i,360,238,185), 0, uv, join.id, -1.0f, color);
+			spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, bg.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 5.3781512605, TheMainGame::Instance()->_camera.getScreenDimensions().y / 3.89189189189), 0, uv, join.id, -1.0f, color);
 		}
 		if(_joined[i])
 		{
@@ -167,38 +170,38 @@ void MultiCharacterSelectState::Draw(Bengine::SpriteBatch& spriteBatch)
 			switch (_character[i])
 			{
 			case 0:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, misaka.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, misaka.id, 0.0f, color);
 				break;
 			case 1:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, ghoul.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, ghoul.id, 0.0f, color);
 				break;
 			case 2:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, peach.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, peach.id, 0.0f, color);
 				break;
 			case 3:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,360,320,720), 0, uv, gorilla.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, gorilla.id, 0.0f, color);
 				break;
 			}
 
 			switch (_direction[i])
 			{
 			case Direction::NEUTRAL:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,720-35,60,30), 0, uv, arrow.id, 0.0f, color);
-				spriteBatch.draw(glm::vec4(160 + 320 * i,35,60,30), 3.14159265359, uv, arrow.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y - TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 0, uv, arrow.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 3.14159265359, uv, arrow.id, 0.0f, color);
 				break;
 			case Direction::UP:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,720-35,60,30), 0, uv, arrow.id, 0.0f, green);
-				spriteBatch.draw(glm::vec4(160 + 320 * i,35,60,30), 3.14159265359, uv, arrow.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y - TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 0, uv, arrow.id, 0.0f, green);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 3.14159265359, uv, arrow.id, 0.0f, color);
 				break;
 			case Direction::DOWN:
-				spriteBatch.draw(glm::vec4(160 + 320 * i,720-35,60,30), 0, uv, arrow.id, 0.0f, color);
-				spriteBatch.draw(glm::vec4(160 + 320 * i,35,60,30), 3.14159265359, uv, arrow.id, 0.0f, green);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y - TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 0, uv, arrow.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 20.5714285714, TheMainGame::Instance()->_camera.getScreenDimensions().x / 21.3333333333, TheMainGame::Instance()->_camera.getScreenDimensions().y / 24), 3.14159265359, uv, arrow.id, 0.0f, green);
 				break;
 			}
 		}
 		if(_ready[i])
 		{
-		spriteBatch.draw(glm::vec4(160 + 320 * i,360,250,250), 0, uv, ready.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 5.12, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2.88), 0, uv, ready.id, 0.0f, color);
 		}
 	}
 }

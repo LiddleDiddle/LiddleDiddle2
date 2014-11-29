@@ -2,6 +2,8 @@
 #include <iostream>
 #include "MainMenuGameState.h"
 #include <Bengine\ResourceManager.h>
+#include "StartScreenState.h"
+#include "MainGame.h"
 IntroGameState::IntroGameState(const std::shared_ptr<GameStateManager> &gameStateManager) :
     gameStateManager(gameStateManager) 
 {
@@ -24,7 +26,7 @@ void IntroGameState::Update(float elapsedTime, Bengine::InputManager& inputManag
 	else
 		_startTime = true;
 	if(_time >= 2)
-		this->gameStateManager->Switch(std::shared_ptr<GameState>(new MainMenuGameState(gameStateManager)));
+		this->gameStateManager->Switch(std::shared_ptr<GameState>(new StartScreenState(gameStateManager)));
   }
 
 void IntroGameState::Draw(Bengine::SpriteBatch& spriteBatch)
@@ -38,7 +40,7 @@ void IntroGameState::Draw(Bengine::SpriteBatch& spriteBatch)
     color.b = 255;
     color.a = 255;
 
-	glm::vec4 rectangle = glm::vec4(640,360,1280,720);
+	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x/2, MainGame::Instance()->_camera.getScreenDimensions().y/2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
 
 	spriteBatch.draw(rectangle, 0, uv, spook.id, 0.0f, color);
 }
