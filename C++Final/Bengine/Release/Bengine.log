@@ -1,1 +1,23 @@
-﻿  Bengine.vcxproj -> C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\Bengine.lib
+﻿  Bengine.cpp
+  Camera2D.cpp
+  Errors.cpp
+  GLSLProgram.cpp
+  ImageLoader.cpp
+  InputManager.cpp
+  IOManager.cpp
+IOManager.cpp(19): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+IOManager.cpp(23): warning C4244: '-=' : conversion from 'std::streamoff' to 'int', possible loss of data
+  picoPNG.cpp
+  ResourceManager.cpp
+  Sprite.cpp
+  SpriteBatch.cpp
+SpriteBatch.cpp(8): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+SpriteBatch.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+SpriteBatch.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+  TextureCache.cpp
+  Timing.cpp
+Timing.cpp(24): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
+Timing.cpp(41): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
+Timing.cpp(44): warning C4244: 'initializing' : conversion from 'Uint32' to 'float', possible loss of data
+  Window.cpp
+  Bengine.vcxproj -> C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\Bengine.lib

@@ -1,99 +1,169 @@
-﻿liquidfun.lib(b2World.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2World.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2Body.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2Body.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ParticleGroup.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ParticleGroup.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2CircleShape.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2CircleShape.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2PolygonShape.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2PolygonShape.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2EdgeShape.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2EdgeShape.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2BlockAllocator.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2BlockAllocator.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2BroadPhase.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2BroadPhase.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ContactManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ContactManager.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ParticleSystem.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ParticleSystem.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2Fixture.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2Fixture.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2Island.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2Island.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2Joint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2Joint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2PulleyJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2PulleyJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2Contact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2Contact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2TrackedBlock.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2TrackedBlock.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2WorldCallbacks.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2WorldCallbacks.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ChainShape.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ChainShape.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ContactSolver.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ContactSolver.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2DistanceJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2DistanceJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2WheelJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2WheelJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2MouseJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2MouseJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2RevoluteJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2RevoluteJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2PrismaticJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2PrismaticJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2GearJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2GearJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2WeldJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2WeldJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2FrictionJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2FrictionJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2RopeJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2RopeJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2MotorJoint.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2MotorJoint.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2CircleContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2CircleContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2PolygonAndCircleContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2PolygonAndCircleContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2PolygonContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2PolygonContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2EdgeAndCircleContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2EdgeAndCircleContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2EdgeAndPolygonContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2EdgeAndPolygonContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ChainAndCircleContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ChainAndCircleContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-liquidfun.lib(b2ChainAndPolygonContact.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-liquidfun.lib(b2ChainAndPolygonContact.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(Camera2D.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(Camera2D.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
+﻿  Arrow.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Arrow.cpp(38): warning C4244: '=' : conversion from 'double' to 'float32', possible loss of data
+  Ball.cpp
+  BasicArrowState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+BasicArrowState.cpp(15): warning C4018: '<' : signed/unsigned mismatch
+BasicArrowState.cpp(17): warning C4804: '>' : unsafe use of type 'bool' in operation
+BasicArrowState.cpp(27): warning C4018: '<' : signed/unsigned mismatch
+BasicArrowState.cpp(34): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+BasicArrowState.cpp(58): warning C4018: '<' : signed/unsigned mismatch
+  BasicState.cpp
+  Box.cpp
+  Bullet.cpp
+  Homura.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Homura.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+Homura.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  HomuraAir.cpp
+  HomuraGround.cpp
+HomuraGround.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+HomuraGround.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  Item.cpp
+  Mami.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Mami.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+Mami.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  MamiAir.cpp
+  MamiGround.cpp
+MamiGround.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+MamiGround.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  ManaOrb.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  MyContactListener.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  ControllerMenuState.cpp
+ControllerMenuState.cpp(38): warning C4018: '<' : signed/unsigned mismatch
+ControllerMenuState.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+ControllerMenuState.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+  DefaultGameStateManager.cpp
+  Drawable.cpp
+  GameObject.cpp
+  GameState.cpp
+  Compiling...
+  GameStateManager.cpp
+  GameStateProvider.cpp
+  GeneralManager.cpp
+GeneralManager.cpp(15): warning C4390: ';' : empty controlled statement found; is this the intent?
+GeneralManager.cpp(45): warning C4018: '<' : signed/unsigned mismatch
+  Ground.cpp
+  IntroGameState.cpp
+  JumpingState.cpp
+JumpingState.cpp(55): warning C4305: '+=' : truncation from 'double' to 'float'
+  Level.cpp
+  LevelLoader.cpp
+  LevelState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+LevelState.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+LevelState.cpp(82): warning C4018: '<' : signed/unsigned mismatch
+LevelState.cpp(92): warning C4018: '<' : signed/unsigned mismatch
+LevelState.cpp(104): warning C4018: '<' : signed/unsigned mismatch
+LevelState.cpp(141): warning C4018: '<' : signed/unsigned mismatch
+LevelState.cpp(146): warning C4018: '<' : signed/unsigned mismatch
+  LevelWall.cpp
+  main.cpp
+  MainGame.cpp
+MainGame.cpp(133): warning C4244: 'argument' : conversion from 'Sint32' to 'float', possible loss of data
+  MainMenuGameState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  MainMenuState.cpp
+  Modality.cpp
+  MultiCharacterSelectState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+MultiCharacterSelectState.cpp(191): warning C4305: 'argument' : truncation from 'double' to 'float'
+MultiCharacterSelectState.cpp(195): warning C4305: 'argument' : truncation from 'double' to 'float'
+MultiCharacterSelectState.cpp(199): warning C4305: 'argument' : truncation from 'double' to 'float'
+  Pendulum.cpp
+  PhysicsTile.cpp
+  Player.cpp
+  RemedyMenuState.cpp
+RemedyMenuState.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+RemedyMenuState.cpp(64): warning C4018: '<' : signed/unsigned mismatch
+RemedyMenuState.cpp(75): warning C4018: '<' : signed/unsigned mismatch
+RemedyMenuState.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+  Compiling...
+  Sayaka.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Sayaka.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+Sayaka.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  SayakaAir.cpp
+  SayakaGround.cpp
+SayakaGround.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+SayakaGround.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  Seesaw.cpp
+  StageSelectState.cpp
+StageSelectState.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+StageSelectState.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+StageSelectState.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+StageSelectState.cpp(67): warning C4018: '>' : signed/unsigned mismatch
+  StandingState.cpp
+StandingState.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+StandingState.cpp(54): warning C4305: '+=' : truncation from 'double' to 'float'
+  StartScreenState.cpp
+  TilemapEditorState.cpp
+  tinyxml2.cpp
+  TylerMenuState.cpp
+TylerMenuState.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+  Updateable.cpp
+  wall.cpp
+  WrekTangle.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\Arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+WrekTangle.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+WrekTangle.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
 Bengine.lib(Camera2D.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
-Bengine.lib(ResourceManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(ResourceManager.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(SpriteBatch.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(SpriteBatch.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(InputManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(InputManager.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(Window.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(Window.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(GLSLProgram.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(GLSLProgram.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(Timing.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(Timing.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(TextureCache.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(TextureCache.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(Errors.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(Errors.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(ImageLoader.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(ImageLoader.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(picoPNG.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(picoPNG.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-Bengine.lib(IOManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '2' doesn't match value '0' in Arrow.obj
-Bengine.lib(IOManager.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MDd_DynamicDebug' doesn't match value 'MD_DynamicRelease' in Arrow.obj
-LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
-C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\MagicalTower.exe : fatal error LNK1319: 96 mismatches detected
+MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+liquidfun.lib(b2DistanceJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2DistanceJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2FrictionJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2FrictionJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2GearJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2GearJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Joint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Joint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2MotorJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2MotorJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2MouseJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2MouseJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2PrismaticJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PrismaticJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2PulleyJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PulleyJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2RevoluteJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2RevoluteJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2RopeJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2RopeJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2WeldJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WeldJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2WheelJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WheelJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2CircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Contact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Contact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ContactSolver.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ContactSolver.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2PolygonAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2EdgeAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2EdgeAndPolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeAndPolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ChainAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ChainAndPolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainAndPolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2PolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Body.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Body.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ContactManager.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ContactManager.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Fixture.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Fixture.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Island.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Island.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2World.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2World.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2WorldCallbacks.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WorldCallbacks.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2BlockAllocator.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2BlockAllocator.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Draw.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Draw.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2FreeList.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2FreeList.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Math.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Math.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Settings.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Settings.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2StackAllocator.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2StackAllocator.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Timer.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Timer.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2TrackedBlock.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2TrackedBlock.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2CircleShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CircleShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2EdgeShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ChainShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2PolygonShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2BroadPhase.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2BroadPhase.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2CollideCircle.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollideCircle.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2CollideEdge.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollideEdge.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2CollidePolygon.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollidePolygon.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Collision.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Collision.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Distance.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Distance.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2DynamicTree.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2DynamicTree.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2TimeOfImpact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2TimeOfImpact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2Particle.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Particle.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ParticleGroup.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ParticleGroup.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2ParticleSystem.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ParticleSystem.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+liquidfun.lib(b2VoronoiDiagram.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2VoronoiDiagram.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\vc120.pdb'; linking object as if no debug info
+  MagicalTower.vcxproj -> C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Release\MagicalTower.exe

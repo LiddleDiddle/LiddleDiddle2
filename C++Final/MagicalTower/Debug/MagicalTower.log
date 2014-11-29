@@ -1,4 +1,120 @@
-﻿MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿  WrekTangle.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\wrektangle.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\wrektangle.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  wall.cpp
+  Updateable.cpp
+  TylerMenuState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\tylermenustate.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+  tinyxml2.cpp
+  TilemapEditorState.cpp
+  StartScreenState.cpp
+  StandingState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\standingstate.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\standingstate.cpp(54): warning C4305: '+=' : truncation from 'double' to 'float'
+  StageSelectState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(67): warning C4018: '>' : signed/unsigned mismatch
+  Seesaw.cpp
+  SayakaGround.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayakaground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayakaground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  SayakaAir.cpp
+  Sayaka.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayaka.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayaka.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  RemedyMenuState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(64): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(75): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+  Player.cpp
+  PhysicsTile.cpp
+  Pendulum.cpp
+  MultiCharacterSelectState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(191): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(195): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(199): warning C4305: 'argument' : truncation from 'double' to 'float'
+  Modality.cpp
+  MainMenuState.cpp
+  Generating Code...
+  Compiling...
+  MainMenuGameState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  MainGame.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\maingame.cpp(133): warning C4244: 'argument' : conversion from 'Sint32' to 'float', possible loss of data
+  main.cpp
+  LevelWall.cpp
+  LevelState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(82): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(92): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(104): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(141): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(146): warning C4018: '<' : signed/unsigned mismatch
+  LevelLoader.cpp
+  Level.cpp
+  JumpingState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\jumpingstate.cpp(55): warning C4305: '+=' : truncation from 'double' to 'float'
+  IntroGameState.cpp
+  Ground.cpp
+  GeneralManager.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\generalmanager.cpp(15): warning C4390: ';' : empty controlled statement found; is this the intent?
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\generalmanager.cpp(45): warning C4018: '<' : signed/unsigned mismatch
+  GameStateProvider.cpp
+  GameStateManager.cpp
+  GameState.cpp
+  GameObject.cpp
+  Drawable.cpp
+  DefaultGameStateManager.cpp
+  ControllerMenuState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(38): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+  MyContactListener.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  ManaOrb.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
+  Compiling...
+  MamiGround.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mamiground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mamiground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  MamiAir.cpp
+  Mami.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mami.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mami.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  Item.cpp
+  HomuraGround.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homuraground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homuraground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+  HomuraAir.cpp
+  Homura.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homura.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homura.cpp(81): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+  Bullet.cpp
+  Box.cpp
+  BasicState.cpp
+  BasicArrowState.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(15): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(17): warning C4804: '>' : unsafe use of type 'bool' in operation
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(27): warning C4018: '<' : signed/unsigned mismatch
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(34): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(58): warning C4018: '<' : signed/unsigned mismatch
+  Ball.cpp
+  Arrow.cpp
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.cpp(38): warning C4244: '=' : conversion from 'double' to 'float32', possible loss of data
+  Generating Code...
+MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
 liquidfun.lib(b2DistanceJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2DistanceJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
 liquidfun.lib(b2FrictionJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2FrictionJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
 liquidfun.lib(b2GearJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2GearJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
