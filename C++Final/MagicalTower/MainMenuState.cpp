@@ -23,7 +23,7 @@ void MainMenuState::Entered() {
 	rects = new glm::vec4[7];
 	for (int i = 0; i < 7; i++)
 	{
-		rects[i] = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 1.28, MainGame::Instance()->_camera.getScreenDimensions().y - (i + 1) * MainGame::Instance()->_camera.getScreenDimensions().y / 16 * 2, MainGame::Instance()->_camera.getScreenDimensions().x / 6.4, MainGame::Instance()->_camera.getScreenDimensions().y / 14.4);
+		rects[i] = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x *.85, MainGame::Instance()->_camera.getScreenDimensions().y - (i + 1) * MainGame::Instance()->_camera.getScreenDimensions().y / 16 * 2, MainGame::Instance()->_camera.getScreenDimensions().x / 6.4, MainGame::Instance()->_camera.getScreenDimensions().y / 14.4);
 	}
 	_hover = 0;
 	
@@ -48,6 +48,9 @@ void MainMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 	Bengine::ColorRGBA8 color(150,150,150,255);
 
 	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
+	static Bengine::GLTexture pink = Bengine::ResourceManager::getTexture("Textures/pinkBG.png");
+	static Bengine::GLTexture mainMenuBG = Bengine::ResourceManager::getTexture("Textures/mainMenuBG.png");
+	static Bengine::GLTexture tint = Bengine::ResourceManager::getTexture("Textures/tint.png");
 	static Bengine::GLTexture singlePlayer = Bengine::ResourceManager::getTexture("Textures/MainMenu/singlePlayerText.png");
 	static Bengine::GLTexture multiplayer = Bengine::ResourceManager::getTexture("Textures/MainMenu/multiplayerText.png");
 	static Bengine::GLTexture mapEditor = Bengine::ResourceManager::getTexture("Textures/MainMenu/mapEditorText.png");
@@ -58,8 +61,11 @@ void MainMenuState::Draw(Bengine::SpriteBatch& spriteBatch)
 
 	
 
-	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
 
+	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
+	spriteBatch.draw(glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, pink.id, 0, hoverColor);
+	spriteBatch.draw(glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 1.64102564103 / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x / 1.64102564103, MainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, mainMenuBG.id, 0, hoverColor);
+	spriteBatch.draw(glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x * 0.875, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x / 4, MainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, tint.id, 0, hoverColor);
 	if(_hover == 0)
 		spriteBatch.draw(rects[0],0,uv,singlePlayer.id,0,hoverColor);
 	else

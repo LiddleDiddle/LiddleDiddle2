@@ -54,9 +54,9 @@ void StartScreenState::Draw(Bengine::SpriteBatch& spriteBatch)
 	color.b = 255;
 	color.a = 255;
 
-	static Bengine::GLTexture bg = Bengine::ResourceManager::getTexture("Textures/StartMenu/bg.png");
+	static Bengine::GLTexture madoka = Bengine::ResourceManager::getTexture("Textures/medMadoka.png");
 	glm::vec4 rectangle = glm::vec4(MainGame::Instance()->_camera.getScreenDimensions().x / 2, MainGame::Instance()->_camera.getScreenDimensions().y / 2, MainGame::Instance()->_camera.getScreenDimensions().x, MainGame::Instance()->_camera.getScreenDimensions().y);
 
 
-	spriteBatch.draw(rectangle, 0, uv, bg.id, 0.0f, color);
+	spriteBatch.draw(rectangle, 0, uv, madoka.id, 0.0f, color);
 }

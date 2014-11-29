@@ -151,19 +151,19 @@ void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
 	if (_alive)
 	{
 		spriteBatch.draw(glm::vec4(_body->GetPosition().x * TheMainGame::Instance()->_camera.getScreenDimensions().x / 32,
-			_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + 40,
-			76.5, 20), 0.0f, uv, manaBarBG.id, 0.0f, color);
+			_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + TheMainGame::Instance()->_camera.getScreenDimensions().y / 18,
+			TheMainGame::Instance()->_camera.getScreenDimensions().x / 16.7320261438, TheMainGame::Instance()->_camera.getScreenDimensions().y / 36), 0.0f, uv, manaBarBG.id, 0.0f, color);
 
 		for (int i = 0; i < _mana; i++)
 		{
-			spriteBatch.draw(glm::vec4(_body->GetPosition().x * TheMainGame::Instance()->_camera.getScreenDimensions().x / 32 - 37.5 + (.75 * i),
-				_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + 40,
-				.75, 20), 0.0f, uv, manaBarTick.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(_body->GetPosition().x * TheMainGame::Instance()->_camera.getScreenDimensions().x / 32 - TheMainGame::Instance()->_camera.getScreenDimensions().x / 34.1333333333 + (TheMainGame::Instance()->_camera.getScreenDimensions().x / 1706.66666667 * i),
+				_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + TheMainGame::Instance()->_camera.getScreenDimensions().y / 18,
+				TheMainGame::Instance()->_camera.getScreenDimensions().x / 1706.66666667, TheMainGame::Instance()->_camera.getScreenDimensions().y / 36), 0.0f, uv, manaBarTick.id, 0.0f, color);
 		}
 
 		spriteBatch.draw(glm::vec4(_body->GetPosition().x * TheMainGame::Instance()->_camera.getScreenDimensions().x / 32,
-			_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + 40,
-			76.5, 20), 0.0f, uv, manaBarFrame.id, 0.0f, color);
+			_body->GetPosition().y * TheMainGame::Instance()->_camera.getScreenDimensions().y / 18 + TheMainGame::Instance()->_camera.getScreenDimensions().y / 18,
+			TheMainGame::Instance()->_camera.getScreenDimensions().x / 16.7320261438, TheMainGame::Instance()->_camera.getScreenDimensions().y / 36), 0.0f, uv, manaBarFrame.id, 0.0f, color);
 
 		//---------------------------------------------------------------------------------------------------------------------
 		_currentState->draw(spriteBatch, _body);
@@ -172,6 +172,5 @@ void WrekTangle::draw(Bengine::SpriteBatch& spriteBatch){
 
 	
 	
-
 	
 }

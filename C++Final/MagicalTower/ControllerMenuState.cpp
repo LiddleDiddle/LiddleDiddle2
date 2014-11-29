@@ -76,11 +76,11 @@ void ControllerMenuState::Draw(Bengine::SpriteBatch& spriteBatch) {
 	
 	for (int i = 0; i < _joined; i++)
 	{
-		spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x/5 + TheMainGame::Instance()->_camera.getScreenDimensions().x/5 * i,64,128,128), 0, uv, controller.id, 0.0f, color);
+		spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 5 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 5 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 11.25, TheMainGame::Instance()->_camera.getScreenDimensions().x / 10, TheMainGame::Instance()->_camera.getScreenDimensions().y / 5.625), 0, uv, controller.id, 0.0f, color);
 	}
 
-	spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x/2,TheMainGame::Instance()->_camera.getScreenDimensions().y*.75,238,185), 0, uv, join.id, 0.0f, color);
+	spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 2, TheMainGame::Instance()->_camera.getScreenDimensions().y*.75, TheMainGame::Instance()->_camera.getScreenDimensions().x / 5.3781512605, TheMainGame::Instance()->_camera.getScreenDimensions().y / 3.89189189189), 0, uv, join.id, 0.0f, color);
 
-	spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x/2, 128+75,TheMainGame::Instance()->_camera.getScreenDimensions().x,TheMainGame::Instance()->_camera.getScreenDimensions().y / 8.64), 0, uv, bar.id, 0.0f, color);
+	spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 2, TheMainGame::Instance()->_camera.getScreenDimensions().y / 3.54679802956, TheMainGame::Instance()->_camera.getScreenDimensions().x, TheMainGame::Instance()->_camera.getScreenDimensions().y / 8.64), 0, uv, bar.id, 0.0f, color);
 	
 }
