@@ -22,6 +22,21 @@
     <Filter Include="Items">
       <UniqueIdentifier>{15befbb1-f40f-44dc-9e71-defd6a4537ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character\Madokis">
+      <UniqueIdentifier>{ae1ff3a9-330e-4f49-8c63-805964eb64ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Mami">
+      <UniqueIdentifier>{568f7d37-a886-408e-8adf-401a58b3d73a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Sayaka">
+      <UniqueIdentifier>{04ee851a-6a27-41e1-92eb-d3a343f2bb07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\HomuHomu">
+      <UniqueIdentifier>{5e621b35-aaf5-45b1-8035-412a9f886cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\WeaponStates">
+      <UniqueIdentifier>{af3aa31f-1bdc-4cc5-86de-ace871020724}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ball.cpp">
@@ -132,21 +147,6 @@
     <ClCompile Include="LevelWall.cpp">
       <Filter>Hardcoded Level</Filter>
     </ClCompile>
-    <ClCompile Include="StandingState.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
-    <ClCompile Include="WrekTangle.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
-    <ClCompile Include="JumpingState.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
-    <ClCompile Include="BasicArrowState.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
-    <ClCompile Include="Arrow.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
     <ClCompile Include="MyContactListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -155,6 +155,48 @@
     </ClCompile>
     <ClCompile Include="Item.cpp">
       <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Character\WeaponStates</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicArrowState.cpp">
+      <Filter>Character\WeaponStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Homura.cpp">
+      <Filter>Character\HomuHomu</Filter>
+    </ClCompile>
+    <ClCompile Include="Mami.cpp">
+      <Filter>Character\Mami</Filter>
+    </ClCompile>
+    <ClCompile Include="MamiAir.cpp">
+      <Filter>Character\Mami</Filter>
+    </ClCompile>
+    <ClCompile Include="MamiGround.cpp">
+      <Filter>Character\Mami</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpingState.cpp">
+      <Filter>Character\Madokis</Filter>
+    </ClCompile>
+    <ClCompile Include="StandingState.cpp">
+      <Filter>Character\Madokis</Filter>
+    </ClCompile>
+    <ClCompile Include="WrekTangle.cpp">
+      <Filter>Character\Madokis</Filter>
+    </ClCompile>
+    <ClCompile Include="Sayaka.cpp">
+      <Filter>Character\Sayaka</Filter>
+    </ClCompile>
+    <ClCompile Include="HomuraAir.cpp">
+      <Filter>Character\HomuHomu</Filter>
+    </ClCompile>
+    <ClCompile Include="HomuraGround.cpp">
+      <Filter>Character\HomuHomu</Filter>
+    </ClCompile>
+    <ClCompile Include="SayakaGround.cpp">
+      <Filter>Character\Sayaka</Filter>
+    </ClCompile>
+    <ClCompile Include="SayakaAir.cpp">
+      <Filter>Character\Sayaka</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -192,9 +234,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ground.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IntroGameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Level.h">
@@ -266,23 +305,8 @@
     <ClInclude Include="CharacterState.h">
       <Filter>Character</Filter>
     </ClInclude>
-    <ClInclude Include="StandingState.h">
-      <Filter>Character</Filter>
-    </ClInclude>
-    <ClInclude Include="WrekTangle.h">
-      <Filter>Character</Filter>
-    </ClInclude>
-    <ClInclude Include="JumpingState.h">
-      <Filter>Character</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicArrowState.h">
-      <Filter>Character</Filter>
-    </ClInclude>
     <ClInclude Include="BasicState.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Arrow.h">
-      <Filter>Character</Filter>
     </ClInclude>
     <ClInclude Include="MyContactListener.h">
       <Filter>Header Files</Filter>
@@ -298,6 +322,51 @@
     </ClInclude>
     <ClInclude Include="WeaponState.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Character\WeaponStates</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicArrowState.h">
+      <Filter>Character\WeaponStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Homura.h">
+      <Filter>Character\HomuHomu</Filter>
+    </ClInclude>
+    <ClInclude Include="Mami.h">
+      <Filter>Character\Mami</Filter>
+    </ClInclude>
+    <ClInclude Include="MamiAir.h">
+      <Filter>Character\Mami</Filter>
+    </ClInclude>
+    <ClInclude Include="MamiGround.h">
+      <Filter>Character\Mami</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpingState.h">
+      <Filter>Character\Madokis</Filter>
+    </ClInclude>
+    <ClInclude Include="StandingState.h">
+      <Filter>Character\Madokis</Filter>
+    </ClInclude>
+    <ClInclude Include="WrekTangle.h">
+      <Filter>Character\Madokis</Filter>
+    </ClInclude>
+    <ClInclude Include="Sayaka.h">
+      <Filter>Character\Sayaka</Filter>
+    </ClInclude>
+    <ClInclude Include="HomuraGround.h">
+      <Filter>Character\HomuHomu</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroGameState.h">
+      <Filter>Character\HomuHomu</Filter>
+    </ClInclude>
+    <ClInclude Include="HomuraAir.h">
+      <Filter>Character\HomuHomu</Filter>
+    </ClInclude>
+    <ClInclude Include="SayakaGround.h">
+      <Filter>Character\Sayaka</Filter>
+    </ClInclude>
+    <ClInclude Include="SayakaAir.h">
+      <Filter>Character\Sayaka</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

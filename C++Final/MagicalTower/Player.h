@@ -30,6 +30,7 @@ public:
 	glm::vec2 getRightStick() {return _rightStick;};
 
 	///did the player joing in the character select screen
+	int selectedCharacter;
 private:
 
 	/// Returns true if the key is held down

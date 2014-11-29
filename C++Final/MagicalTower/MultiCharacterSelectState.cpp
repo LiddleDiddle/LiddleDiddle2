@@ -61,13 +61,13 @@ void MultiCharacterSelectState::Exiting() {
 void MultiCharacterSelectState::Update(float elapsedTime, Bengine::InputManager& _inputManager) {
 	for (int i = 0; i < _numPlayers; i++)
 	{
-		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_DPAD_UP )){
+		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_DPAD_UP ) && !_ready[i]){
 			_character[i]++;
 			if(_character[i] > 3)
 				_character[i] = 0;
 		}
 
-		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_DPAD_DOWN )){
+		if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_DPAD_DOWN) && !_ready[i]){
 			_character[i]--;
 			if(_character[i] < 0)
 				_character[i] = 3;
@@ -76,16 +76,17 @@ void MultiCharacterSelectState::Update(float elapsedTime, Bengine::InputManager&
 		_direction[i] = Direction::NEUTRAL;
 
 
-		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyDown(SDL_CONTROLLER_BUTTON_DPAD_UP )){
+		if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyDown(SDL_CONTROLLER_BUTTON_DPAD_UP) && !_ready[i]){
 			_direction[i] = Direction::UP;
 		}
 
-		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyDown(SDL_CONTROLLER_BUTTON_DPAD_DOWN )){
+		if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyDown(SDL_CONTROLLER_BUTTON_DPAD_DOWN) && !_ready[i]){
 			_direction[i] = Direction::DOWN;
 		}
 
 		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_A )){
 			_ready[i] = true;
+			GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].selectedCharacter = _character[i];
 		}
 
 		if(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_B )){
@@ -135,10 +136,10 @@ void MultiCharacterSelectState::Draw(Bengine::SpriteBatch& spriteBatch)
 	static Bengine::GLTexture join = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/join.png");
 
 	//characters
-	static Bengine::GLTexture misaka = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/misaka.png");
-	static Bengine::GLTexture ghoul = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/ghoul.png");
-	static Bengine::GLTexture peach = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/peach.png");
-	static Bengine::GLTexture gorilla = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/gorilla.png");
+	static Bengine::GLTexture madoka = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/madoka.png");
+	static Bengine::GLTexture homura = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/homura.png");
+	static Bengine::GLTexture mami = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/mami.png");
+	static Bengine::GLTexture sayaka = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/sayaka.png");
 
 	static Bengine::GLTexture ready = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/ready.png");
 	static Bengine::GLTexture border = Bengine::ResourceManager::getTexture("Textures/CharacterSelect/border.png");
@@ -170,16 +171,16 @@ void MultiCharacterSelectState::Draw(Bengine::SpriteBatch& spriteBatch)
 			switch (_character[i])
 			{
 			case 0:
-				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, misaka.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, madoka.id, 0.0f, color);
 				break;
 			case 1:
-				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, ghoul.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, homura.id, 0.0f, color);
 				break;
 			case 2:
-				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, peach.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, mami.id, 0.0f, color);
 				break;
 			case 3:
-				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, gorilla.id, 0.0f, color);
+				spriteBatch.draw(glm::vec4(TheMainGame::Instance()->_camera.getScreenDimensions().x / 8 + TheMainGame::Instance()->_camera.getScreenDimensions().x / 4 * i, TheMainGame::Instance()->_camera.getScreenDimensions().y / 2, TheMainGame::Instance()->_camera.getScreenDimensions().x / 4, TheMainGame::Instance()->_camera.getScreenDimensions().y), 0, uv, sayaka.id, 0.0f, color);
 				break;
 			}
 

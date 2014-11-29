@@ -9,7 +9,14 @@
 #include <Bengine/InputManager.h>
 #include <memory>
 #include <Box2D/Box2D.h>
+
+/// characters ----------
 #include "WrekTangle.h"
+#include "Homura.h"
+#include "Mami.h"
+#include "Sayaka.h"
+///----------------------
+
 #include "MyContactListener.h"
 #include "Item.h"
 #include "ManaOrb.h"

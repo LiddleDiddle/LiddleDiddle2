@@ -59,6 +59,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <EnablePREfast>false</EnablePREfast>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,6 +77,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,7 +94,13 @@
     <ClCompile Include="BasicState.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Homura.cpp" />
+    <ClCompile Include="HomuraAir.cpp" />
+    <ClCompile Include="HomuraGround.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Mami.cpp" />
+    <ClCompile Include="MamiAir.cpp" />
+    <ClCompile Include="MamiGround.cpp" />
     <ClCompile Include="ManaOrb.cpp" />
     <ClCompile Include="MyContactListener.cpp" />
     <ClCompile Include="ControllerMenuState.cpp" />
@@ -120,6 +128,9 @@
     <ClCompile Include="PhysicsTile.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RemedyMenuState.cpp" />
+    <ClCompile Include="Sayaka.cpp" />
+    <ClCompile Include="SayakaAir.cpp" />
+    <ClCompile Include="SayakaGround.cpp" />
     <ClCompile Include="Seesaw.cpp" />
     <ClCompile Include="StageSelectState.cpp" />
     <ClCompile Include="StandingState.cpp" />
@@ -141,7 +152,13 @@
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterState.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Homura.h" />
+    <ClInclude Include="HomuraAir.h" />
+    <ClInclude Include="HomuraGround.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Mami.h" />
+    <ClInclude Include="MamiAir.h" />
+    <ClInclude Include="MamiGround.h" />
     <ClInclude Include="ManaOrb.h" />
     <ClInclude Include="MyContactListener.h" />
     <ClInclude Include="ControllerMenuState.h" />
@@ -168,6 +185,9 @@
     <ClInclude Include="PhysicsTile.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RemedyMenuState.h" />
+    <ClInclude Include="Sayaka.h" />
+    <ClInclude Include="SayakaAir.h" />
+    <ClInclude Include="SayakaGround.h" />
     <ClInclude Include="Seesaw.h" />
     <ClInclude Include="StageSelectState.h" />
     <ClInclude Include="StandingState.h" />

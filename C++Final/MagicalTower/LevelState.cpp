@@ -18,17 +18,39 @@ std::vector<Item*> LevelState::items;
 LevelState::LevelState(const std::shared_ptr<GameStateManager> &gameStateManager) :
 gameStateManager(gameStateManager)
 {
-	
 	Level* level = new Level("Hardcoded Level", "LevelFinal.png", "LevelFinal.xml");
 	levelArray = level->LoadLevel();
 }
 
 void LevelState::Entered() {
 	CreateBox2dWorld();
+
+	// assign characters to players ---------------------------------------------------
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
 	{
-		_characters.push_back(new WrekTangle());
+		switch (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].selectedCharacter)
+		{
+		case 0:
+			_characters.push_back(new WrekTangle());
+			break;
+		case 1:
+			_characters.push_back(new Homura());
+			break;
+		case 2:
+			_characters.push_back(new Mami());
+			break;
+		case 3:
+			_characters.push_back(new Sayaka());
+			break;
+		default:
+			std::cout << "someshit goofed hard\a\n";
+			_characters.push_back(new WrekTangle());
+			break;
+		}
 	}
+//--------------------------------------------------------------------------------
+
+	// Initialize Characters ------------------------------------------------------
 	switch (GENERAL_MANAGER->_joinedPlayers.size())
 	{
 	case 1:
@@ -52,10 +74,11 @@ void LevelState::Entered() {
 	default:
 		break;
 	}
+//---------------------------------------------------------------------------------
 }
 
 void LevelState::Exiting() {
-	std::cout << "_______________ is exiting" << std::endl;  //change this
+	std::cout << "LevelState is exiting" << std::endl;  //change this
 	for (int i = 0; i < items.size(); i++)
 	{
 		delete items[i];

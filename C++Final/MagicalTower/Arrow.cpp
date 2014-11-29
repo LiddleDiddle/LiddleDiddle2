@@ -13,7 +13,7 @@ Arrow::Arrow(float x, float y, b2Vec2 linearVelocity) :
 {
 	// Circle
 	b2CircleShape shape;
-	shape.m_radius = 0.5f;
+	shape.m_radius = 0.25f;
 	
 	b2FixtureDef fd;
 	fd.shape = &shape;
@@ -27,7 +27,7 @@ Arrow::Arrow(float x, float y, b2Vec2 linearVelocity) :
 	body = LevelState::world->CreateBody(&bd);
 	body->CreateFixture(&fd);
 	body->SetUserData(this);
-	body->ApplyForceToCenter(linearVelocity,true);
+	body->ApplyForceToCenter(linearVelocity/4,true);
 }
 
 void Arrow::draw(Bengine::SpriteBatch& spriteBatch)
