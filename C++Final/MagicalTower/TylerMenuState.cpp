@@ -1,5 +1,4 @@
 #include "TylerMenuState.h"
-#include "Assignment4GameState.h"
 #include "StartScreenState.h"
 #include <iostream>
 #include <SDL/SDL.h>
@@ -79,11 +78,7 @@ void TylerMenuState::ProcessInput(Bengine::InputManager _inputManager){
 			glm::vec2 mouseCoords = _inputManager.getMouseCoords();
 			mouseCoords = CAMERA.convertScreenToWorld(mouseCoords);
 
-			//one
-			if (mouseCoords.x > 0 && mouseCoords.x < 320)
-			{
-				this->gameStateManager->Switch(std::shared_ptr<GameState>(new Assignment4GameState(gameStateManager)));
-			}
+			
 			//two
 			if (mouseCoords.x > 320 && mouseCoords.x < 640)
 			{

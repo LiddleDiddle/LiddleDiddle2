@@ -5,6 +5,8 @@
 #include "Entity.h"
 #include "Character.h"
 #include <iostream>
+#include "Item.h"
+#include "ManaOrb.h"
 class MyContactListener : public b2ContactListener
 {
 public:
@@ -39,6 +41,25 @@ public:
 				static_cast<Character*>(bodyUserDataA)->kill();
 				static_cast<Arrow*>(bodyUserDataB)->startContact();
 			}
+			//character Item collision
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::ITEM && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::CHARACTER)
+			{
+				if (static_cast<Item*>(bodyUserDataA)->getItemType() == ItemEnum::MANA_ORB)
+				{
+					static_cast<ManaOrb*>(bodyUserDataA)->kill();
+					static_cast<Character*>(bodyUserDataB)->_mana += static_cast<ManaOrb*>(bodyUserDataA)->getMana();
+
+				}
+			}//Item Character collision
+
+			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::CHARACTER && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::ITEM)
+			{
+				if (static_cast<Item*>(bodyUserDataB)->getItemType() == ItemEnum::MANA_ORB)
+				{
+					static_cast<ManaOrb*>(bodyUserDataB)->kill();
+					static_cast<Character*>(bodyUserDataA)->_mana += static_cast<ManaOrb*>(bodyUserDataB)->getMana();
+				}
+			}
 		}
 
 		if (bodyUserDataA)
@@ -64,19 +85,40 @@ public:
 				static_cast<Arrow*>(bodyUserDataB)->startContact();
 			}
 		}
- }
-// 	void EndContact(b2Contact* contact) {
-// 
-// 		//check if fixture A was a ball
-// 		void* bodyUserData = contact->GetFixtureA()->GetBody()->GetUserData();
-// 		if (bodyUserData)
-// 			static_cast<Arrow*>(bodyUserData)->endContact();
-// 
-// 		//check if fixture B was a ball
-// 		bodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
-// 		if (bodyUserData)
-// 			static_cast<Arrow*>(bodyUserData)->endContact();
-// 
-// 	}
+		//check if fixture A was the foot sensor
+		void* fixtureUserData = contact->GetFixtureA()->GetUserData();
+
+		if (fixtureUserData)
+			if (static_cast<Entity*>(fixtureUserData)->getEntityType() == EntityEnum::CHARACTER)
+			{
+				static_cast<Character*>(fixtureUserData)->numFootContact++;
+			}
+		//check if fixture B was the foot sensor
+		
+		fixtureUserData = contact->GetFixtureB()->GetUserData();
+		if (fixtureUserData)
+			if (static_cast<Entity*>(fixtureUserData)->getEntityType() == EntityEnum::CHARACTER)
+			{
+				static_cast<Character*>(fixtureUserData)->numFootContact++;
+			}
+	}
+	void EndContact(b2Contact* contact) {
+
+		//check if fixture A was the foot sensor
+		void* fixtureUserData = contact->GetFixtureA()->GetUserData();
+		if (fixtureUserData)
+			if (static_cast<Entity*>(fixtureUserData)->getEntityType() == EntityEnum::CHARACTER)
+			{
+				static_cast<Character*>(fixtureUserData)->numFootContact--;
+			}
+		//check if fixture B was the foot sensor
+		
+		fixtureUserData = contact->GetFixtureB()->GetUserData();
+		if (fixtureUserData)
+		if (static_cast<Entity*>(fixtureUserData)->getEntityType() == EntityEnum::CHARACTER)
+		{
+			static_cast<Character*>(fixtureUserData)->numFootContact--;
+		}
+	}
 };
 

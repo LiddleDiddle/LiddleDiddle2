@@ -18,8 +18,12 @@ public:
 	virtual void update(float elapsedTime) = 0;
 	int getEntityType() { return EntityEnum::ITEM; }
 	int getItemType() { return itemType; }
-protected:
+	
+	void kill() { alive = false;}
+	bool living() { return alive; }
 	b2Body* body;
+protected:
+	bool alive;
 	int itemType;
 };
 

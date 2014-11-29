@@ -10,7 +10,7 @@ BasicArrowState::BasicArrowState()
 BasicArrowState::~BasicArrowState()
 {
 }
-WeaponState* BasicArrowState::update(float x, float y, int controllerNumber){
+WeaponState* BasicArrowState::update(float x, float y, int controllerNumber, float& mana){
 
 	for (int i = 0; i < arrows.size(); i++)
 	{
@@ -24,16 +24,22 @@ WeaponState* BasicArrowState::update(float x, float y, int controllerNumber){
 		}
 	}
 
+	for (int i = 0; i < arrows.size(); i++)
+	{
+		arrows[i]->update();
+	}
+
 	glm::vec2 rightStick(GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getRightStick().x, GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].getRightStick().y);
 	_magnitude = glm::length(rightStick);
 	_rotation = atan2(rightStick.y, rightStick.x) - (3.14159265359 / 2);
 
 	arrowSpeed = 1500;
 
-	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) && _magnitude >= 0.2)
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) && _magnitude >= 0.2 && mana >= 25)
 	{
 		glm::vec2 temp = glm::normalize(rightStick);
 		arrows.push_back(new Arrow(x + (temp.x * 1.5f),y + (temp.y * 1.7f), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed)));
+		mana -= _manaCost;
 	}
 
 	

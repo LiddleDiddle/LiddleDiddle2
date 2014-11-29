@@ -53,7 +53,7 @@ namespace Bengine
 		std::printf("*** OpenGL Version %s ***\n", glGetString(GL_VERSION));
 
 		//Set the background color to blue
-		glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+		glClearColor(0.317647059f, 0.70588235294f, 1.0f, 1.0f);
 
 		//set vsync
 		SDL_GL_SetSwapInterval(0);

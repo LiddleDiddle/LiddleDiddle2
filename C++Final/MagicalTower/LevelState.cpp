@@ -71,14 +71,26 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 		_characters[i]->update(elapsedTime);
 	}
 
-	int32 velocityIterations = 6;
-	int32 positionIterations = 2;
+	int32 velocityIterations = 10;
+	int32 positionIterations = 10;
 	world->Step(elapsedTime, velocityIterations, positionIterations);
+
+	
+	
 
 	for (int i = 0; i < items.size(); i++)
 	{
-		items[i]->update(elapsedTime);
+		if (items[i]->living())
+			items[i]->update(elapsedTime);
+		if (!items[i]->living())
+		{
+			world->DestroyBody(items[i]->body);
+			delete items[i];
+			items.erase(items.begin() + i);
+			i = 0;
+		}
 	}
+
 }
 
 void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)

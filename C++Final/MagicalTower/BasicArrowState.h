@@ -8,7 +8,7 @@ class BasicArrowState :
 public:
 	BasicArrowState();
 	~BasicArrowState();
-	WeaponState* update(float x, float y, int controllerNumber);
+	WeaponState* update(float x, float y, int controllerNumber, float& mana);
 	void draw(Bengine::SpriteBatch& spriteBatch, float x, float y);
 	void processInputs(int controllerNumber);
 	void enter();

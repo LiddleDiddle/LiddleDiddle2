@@ -21,17 +21,38 @@ ManaOrb::ManaOrb(float x, float y, float mana)
 	body->CreateFixture(&fd);
 	body->SetUserData(this);
 	itemType = ItemEnum::MANA_ORB;
+	alive = true;
 }
 
 
 ManaOrb::~ManaOrb()
 {
-	LevelState::world->DestroyBody(body);
+
 }
 
 void ManaOrb::update(float elapsedTime)
 {
+	// horizontal teleport -------------------------------------------------------------
+	if (body->GetPosition().x > 32.5)
+	{
+		body->SetTransform(b2Vec2(0.0f, body->GetPosition().y), body->GetAngle());
+	}
+	else if (body->GetPosition().x < -0.05)
+	{
+		body->SetTransform(b2Vec2(32.0f, body->GetPosition().y), body->GetAngle());
+	}
+	//----------------------------------------------------------------------------------
 
+	// vertical teleport ---------------------------------------------------------------
+	if (body->GetPosition().y > 18.5)
+	{
+		body->SetTransform(b2Vec2(body->GetPosition().x, 0.0f), body->GetAngle());
+	}
+	else if (body->GetPosition().y < -0.05)
+	{
+		body->SetTransform(b2Vec2(body->GetPosition().x, 18.0f), body->GetAngle());
+	}
+	//----------------------------------------------------------------------------------
 }
 
 void ManaOrb::draw(Bengine::SpriteBatch& spriteBatch)

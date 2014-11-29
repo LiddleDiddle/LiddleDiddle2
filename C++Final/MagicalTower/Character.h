@@ -13,12 +13,15 @@ public:
 	virtual void draw(Bengine::SpriteBatch& spriteBatch) {}
 	int getEntityType() { return EntityEnum::CHARACTER; }
 	void kill() { _alive = false; }
+	float _mana;
+
+	int numFootContact = 0;
 protected:
 	CharacterState* _currentState;
 	WeaponState* _mainWeaponState;
 	bool _alive;
-	int _mana;
 	b2Body* _body;
 	b2World* _world;
 	int _controllerNumber;
+	float previousMana;
 };
