@@ -9,7 +9,7 @@
 #include <Bengine/InputManager.h>
 #include <memory>
 #include <Box2D/Box2D.h>
-
+#include <Bengine/SpriteFont.h>
 /// characters ----------
 #include "WrekTangle.h"
 #include "Homura.h"
@@ -45,7 +45,7 @@ public:
 	void CreateBox2dWorld();
 	static b2World* world;
 	static std::vector<Item*> items;
-
+	void drawWinner(int winner);
 private:
 	std::vector<Character*> _characters;
 	std::shared_ptr<GameStateManager> gameStateManager;
@@ -55,5 +55,9 @@ private:
 	b2Body* m_groundBody;
 	WrekTangle wrek;
 
+	Bengine::SpriteBatch _fontSpriteBatch;
+	Bengine::SpriteFont* _spriteFont;
+	bool gameOver, check;
+	int theWinner;
 	MyContactListener myContactListenerInstance;
 };

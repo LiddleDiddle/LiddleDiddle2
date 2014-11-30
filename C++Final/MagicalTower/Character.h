@@ -13,6 +13,7 @@ public:
 	virtual void draw(Bengine::SpriteBatch& spriteBatch) {}
 	int getEntityType() { return EntityEnum::CHARACTER; }
 	void kill() { _alive = false; }
+	bool living() { return _alive; }
 	float _mana;
 
 	int numFootContact = 0;

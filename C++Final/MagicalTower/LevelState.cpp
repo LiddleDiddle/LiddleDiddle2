@@ -6,7 +6,7 @@
 #include "Level.h"
 #include "LevelWall.h"
 #include "Ball.h"
-
+#include "ControllerMenuState.h"
 
 #define WIDTH 32
 #define HEIGHT 18
@@ -24,7 +24,9 @@ gameStateManager(gameStateManager)
 
 void LevelState::Entered() {
 	CreateBox2dWorld();
-
+	gameOver = false;
+	check = false;
+	theWinner = 0;
 	// assign characters to players ---------------------------------------------------
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
 	{
@@ -81,7 +83,10 @@ void LevelState::Exiting() {
 	std::cout << "LevelState is exiting" << std::endl;  //change this
 	for (int i = 0; i < items.size(); i++)
 	{
+		world->DestroyBody(items[i]->body);
 		delete items[i];
+		items.erase(items.begin() + i);
+		i = 0;
 	}
 	items.clear();
 }
@@ -98,7 +103,16 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 	int32 positionIterations = 10;
 	world->Step(elapsedTime, velocityIterations, positionIterations);
 
-	
+	if (gameOver)
+	{
+		for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
+		{
+			if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[i]].isKeyPressed(SDL_CONTROLLER_BUTTON_A))
+			{
+				this->gameStateManager->Switch(std::shared_ptr<GameState>(new ControllerMenuState(gameStateManager)));
+			}
+		}
+	}
 	
 
 	for (int i = 0; i < items.size(); i++)
@@ -136,8 +150,11 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 	static Bengine::GLTexture tile10 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile010.png");
 	static Bengine::GLTexture tile11 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile011.png");
 	static Bengine::GLTexture tile12 = Bengine::ResourceManager::getTexture("Textures/Tiles/tile012.png");
-
-	
+	static Bengine::GLTexture P1 = Bengine::ResourceManager::getTexture("Textures/P1.png");
+	static Bengine::GLTexture P2 = Bengine::ResourceManager::getTexture("Textures/P2.png");
+	static Bengine::GLTexture P3 = Bengine::ResourceManager::getTexture("Textures/P3.png");
+	static Bengine::GLTexture P4 = Bengine::ResourceManager::getTexture("Textures/P4.png");
+	static Bengine::GLTexture X = Bengine::ResourceManager::getTexture("Textures/X.png");
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
 	{
 		_characters[i]->draw(spriteBatch);
@@ -200,6 +217,50 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 			{
 				spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / WIDTH / 2 + j*CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT / 2 + i*CAMERA.getScreenDimensions().y / HEIGHT, CAMERA.getScreenDimensions().x / WIDTH, CAMERA.getScreenDimensions().y / HEIGHT), 0.0f, uv, tile12.id, 0.0f, color);
 			}
+		}
+	}
+	int losers = 0;
+	for (int i = 0; i < _characters.size(); i++)
+	{
+		if (!_characters[i]->living())
+		{
+			losers++;
+			gameOver = true;
+		}
+	}
+	if (gameOver && !check)
+	{
+		for (int i = 0; i < _characters.size(); i++)
+		{
+			if (_characters[i]->living())
+			{
+				theWinner = i;
+				check = true;
+			}
+		}
+	}
+	if (losers >= _characters.size() - 1)
+	{
+		switch (theWinner)
+		{
+		case 0 :
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 2, CAMERA.getScreenDimensions().x / 8, CAMERA.getScreenDimensions().y / 6), 0.0f, uv, P1.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 3, CAMERA.getScreenDimensions().x / 16, CAMERA.getScreenDimensions().y / 9), 0.0f, uv, X.id, 0.0f, color);
+			break;
+		case 1:
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 2, CAMERA.getScreenDimensions().x / 8, CAMERA.getScreenDimensions().y / 6), 0.0f, uv, P2.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 3, CAMERA.getScreenDimensions().x / 16, CAMERA.getScreenDimensions().y / 9), 0.0f, uv, X.id, 0.0f, color);
+			break;
+		case 2:
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 2, CAMERA.getScreenDimensions().x / 8, CAMERA.getScreenDimensions().y / 6), 0.0f, uv, P3.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 3, CAMERA.getScreenDimensions().x / 16, CAMERA.getScreenDimensions().y / 9), 0.0f, uv, X.id, 0.0f, color);
+			break;
+		case 3:
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 2, CAMERA.getScreenDimensions().x / 8, CAMERA.getScreenDimensions().y / 6), 0.0f, uv, P4.id, 0.0f, color);
+			spriteBatch.draw(glm::vec4(CAMERA.getScreenDimensions().x / 2, CAMERA.getScreenDimensions().y / 3, CAMERA.getScreenDimensions().x / 16, CAMERA.getScreenDimensions().y / 9), 0.0f, uv, X.id, 0.0f, color);
+			break;
+		default:
+			break;
 		}
 	}
 }

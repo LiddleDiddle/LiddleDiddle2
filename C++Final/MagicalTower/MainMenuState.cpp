@@ -110,7 +110,7 @@ void MainMenuState::checkCollision(Bengine::InputManager inputManager){
 				switch (i)
 				{
 				case 0 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
 					return;
 					break;
 				case 1 :
@@ -118,23 +118,23 @@ void MainMenuState::checkCollision(Bengine::InputManager inputManager){
 					return;
 					break;
 				case 2 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TilemapEditorState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TilemapEditorState(gameStateManager)));
 					return;
 					break;
 				case 3 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
 					return;
 					break;
 				case 4 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
 					return;
 					break;
 				case 5 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
 					return;
 					break;
 				case 6 :
-					this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
+					//this->gameStateManager->Switch(std::shared_ptr<GameState>(new TylerMenuState(gameStateManager)));
 					return;
 					break;
 				}
