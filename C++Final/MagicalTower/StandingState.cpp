@@ -39,7 +39,7 @@ CharacterState* StandingState::update(b2Body &body, int controllerNumber, int co
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/madokis/idle.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.15)
+		if (frameTimer >= 0.1)
 		{
 			currentFrame++;
 			if (currentFrame > frames)

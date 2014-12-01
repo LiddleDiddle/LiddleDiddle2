@@ -39,7 +39,7 @@ CharacterState* MamiGround::update(b2Body &body, int controllerNumber, int conta
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Mami/idle.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.15)
+		if (frameTimer >= 0.1)
 		{
 			currentFrame++;
 			if (currentFrame > 6)
@@ -51,7 +51,7 @@ CharacterState* MamiGround::update(b2Body &body, int controllerNumber, int conta
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Mami/run.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.1)
+		if (frameTimer >= 0.06)
 		{
 			currentFrame++;
 			if (currentFrame > 8)

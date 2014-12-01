@@ -11,8 +11,8 @@ MainGame* MainGame::s_pInstance = 0;
 
 //Constructor, just initializes private member variables
 MainGame::MainGame() : 
-    _screenWidth(1280),
-    _screenHeight(720), 
+    _screenWidth(1920),
+    _screenHeight(1080), 
     _time(0.0f),
     _gameMode(GameMode::PLAY),
     _maxFPS(60.0f),
@@ -41,7 +41,7 @@ void MainGame::initSystems() {
 
     Bengine::init();
 
-    _window.create("Game Engine", _screenWidth, _screenHeight, 0);
+    _window.create("Game Engine", _screenWidth, _screenHeight, 2);
 	TheGeneralManager::Instance()->init();
     initShaders();
 

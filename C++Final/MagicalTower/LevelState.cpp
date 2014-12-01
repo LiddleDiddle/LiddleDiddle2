@@ -131,7 +131,7 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 		}
 	}
 
-	if ((_manaOrbSpawnTimer += 0.01666666) >= 5)
+	if ((_manaOrbSpawnTimer += 0.01666666) >= 0.1)
 	{
 		items.push_back(new ManaOrb(16, 9, 25));
 		_manaOrbSpawnTimer = 0;

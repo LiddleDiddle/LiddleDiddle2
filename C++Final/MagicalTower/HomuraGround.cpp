@@ -39,7 +39,7 @@ CharacterState* HomuraGround::update(b2Body &body, int controllerNumber, int con
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Homura/idle.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.15)
+		if (frameTimer >= 0.1)
 		{
 			currentFrame++;
 			if (currentFrame > 8)
@@ -51,7 +51,7 @@ CharacterState* HomuraGround::update(b2Body &body, int controllerNumber, int con
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Homura/run.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.08)
+		if (frameTimer >= 0.06)
 		{
 			currentFrame++;
 			if (currentFrame > 8)

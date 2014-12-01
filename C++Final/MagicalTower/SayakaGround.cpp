@@ -39,7 +39,7 @@ CharacterState* SayakaGround::update(b2Body &body, int controllerNumber, int con
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Sayaka/idle.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.15)
+		if (frameTimer >= 0.1)
 		{
 			currentFrame++;
 			if (currentFrame > 5)
@@ -51,7 +51,7 @@ CharacterState* SayakaGround::update(b2Body &body, int controllerNumber, int con
 	{
 		_texture = Bengine::ResourceManager::getTexture("Textures/Sayaka/run.png");
 		frameTimer += 0.01666666;
-		if (frameTimer >= 0.1)
+		if (frameTimer >= 0.06)
 		{
 			currentFrame++;
 			if (currentFrame > 8)
