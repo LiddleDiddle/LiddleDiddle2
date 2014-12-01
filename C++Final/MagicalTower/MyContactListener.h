@@ -33,12 +33,19 @@ public:
 			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::PROJECTILE && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::CHARACTER)
 			{
 				static_cast<Arrow*>(bodyUserDataA)->startContact();
-				static_cast<Character*>(bodyUserDataB)->kill();
+				if (!static_cast<Character*>(bodyUserDataB)->getManaShield())
+				{
+					static_cast<Character*>(bodyUserDataB)->kill();
+				}
+				
 			}
 			//character arrow collision
 			if (static_cast<Entity*>(bodyUserDataA)->getEntityType() == EntityEnum::CHARACTER && static_cast<Entity*>(bodyUserDataB)->getEntityType() == EntityEnum::PROJECTILE)
 			{
-				static_cast<Character*>(bodyUserDataA)->kill();
+				if (!static_cast<Character*>(bodyUserDataA)->getManaShield())
+				{
+					static_cast<Character*>(bodyUserDataA)->kill();
+				}
 				static_cast<Arrow*>(bodyUserDataB)->startContact();
 			}
 			//character Item collision

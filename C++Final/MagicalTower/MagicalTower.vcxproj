@@ -102,6 +102,7 @@
     <ClCompile Include="MamiAir.cpp" />
     <ClCompile Include="MamiGround.cpp" />
     <ClCompile Include="ManaOrb.cpp" />
+    <ClCompile Include="ManaShield.cpp" />
     <ClCompile Include="MyContactListener.cpp" />
     <ClCompile Include="ControllerMenuState.cpp" />
     <ClCompile Include="DefaultGameStateManager.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="MamiAir.h" />
     <ClInclude Include="MamiGround.h" />
     <ClInclude Include="ManaOrb.h" />
+    <ClInclude Include="ManaShield.h" />
     <ClInclude Include="MyContactListener.h" />
     <ClInclude Include="ControllerMenuState.h" />
     <ClInclude Include="DefaultGameStateManager.h" />

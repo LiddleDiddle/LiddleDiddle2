@@ -3,7 +3,7 @@
 #include "BasicArrowState.h"
 #include "LevelState.h"
 #include "ManaOrb.h"
-
+#include  "ManaShield.h"
 Homura::Homura(){
 
 }
@@ -12,6 +12,7 @@ Homura::Homura(){
 Homura::~Homura(){
 	delete _currentState;
 	delete _mainWeaponState;
+	delete _manaShield;
 }
 
 void Homura::init(int controllerNumber, float x, float y, b2World* world) {
@@ -53,6 +54,8 @@ void Homura::init(int controllerNumber, float x, float y, b2World* world) {
 	_currentState->enter();
 	_mainWeaponState = new BasicArrowState;
 	_mainWeaponState->enter();
+	_manaShield = new ManaShield;
+	_manaShield->enter();
 	_controllerNumber = controllerNumber;
 	justDied = true;
 	_body->SetUserData(this);
@@ -62,6 +65,7 @@ void Homura::init(int controllerNumber, float x, float y, b2World* world) {
 	color.g = 255;
 	_alpha = 255;
 	previousMana = 100;
+
 }
 
 void Homura::update(float timeStep){
@@ -83,6 +87,9 @@ void Homura::update(float timeStep){
 
 		CharacterState* tempState = _currentState->update(*_body, _controllerNumber, numFootContact);
 		WeaponState* tempWeap = _mainWeaponState->update(_body->GetPosition().x, _body->GetPosition().y, _controllerNumber, _mana);
+		_manaShield->update(_body->GetPosition().x, _body->GetPosition().y, _controllerNumber, _mana);  //---------------------------------------------
+
+		_active = static_cast<ManaShield*>(_manaShield)->isActive();   //------------------------------------------------------------------
 
 		if (tempState != NULL)
 		{
@@ -99,6 +106,28 @@ void Homura::update(float timeStep){
 			_mainWeaponState = tempWeap;
 			_mainWeaponState->enter();
 		}
+
+		// horizontal teleport -------------------------------------------------------------
+		if (_body->GetPosition().x > 32.5)
+		{
+			_body->SetTransform(b2Vec2(0.0f, _body->GetPosition().y), _body->GetAngle());
+		}
+		else if (_body->GetPosition().x < -0.05)
+		{
+			_body->SetTransform(b2Vec2(32.0f, _body->GetPosition().y), _body->GetAngle());
+		}
+		//----------------------------------------------------------------------------------
+
+		// vertical teleport ---------------------------------------------------------------
+		if (_body->GetPosition().y > 18.5)
+		{
+			_body->SetTransform(b2Vec2(_body->GetPosition().x, 0.0f), _body->GetAngle());
+		}
+		else if (_body->GetPosition().y < -0.05)
+		{
+			_body->SetTransform(b2Vec2(_body->GetPosition().x, 18.0f), _body->GetAngle());
+		}
+		//----------------------------------------------------------------------------------
 	}
 	else
 	{
@@ -106,7 +135,7 @@ void Homura::update(float timeStep){
 		{
 			LevelState::items.push_back(new ManaOrb(_body->GetPosition().x, _body->GetPosition().y, _mana));
 			justDied = false;
-			_body->SetTransform(b2Vec2(-1, -1), 0);
+			_body->SetTransform(b2Vec2(-100, -100), 0);
 		}
 		else
 		{
@@ -117,27 +146,7 @@ void Homura::update(float timeStep){
 		_mana = 0;
 	else if (_mana > 100)
 		_mana = 100;
-	// horizontal teleport -------------------------------------------------------------
-	if (_body->GetPosition().x > 32.5)
-	{
-		_body->SetTransform(b2Vec2(0.0f, _body->GetPosition().y), _body->GetAngle());
-	}
-	else if (_body->GetPosition().x < -0.05)
-	{
-		_body->SetTransform(b2Vec2(32.0f, _body->GetPosition().y), _body->GetAngle());
-	}
-	//----------------------------------------------------------------------------------
-
-	// vertical teleport ---------------------------------------------------------------
-	if (_body->GetPosition().y > 18.5)
-	{
-		_body->SetTransform(b2Vec2(_body->GetPosition().x, 0.0f), _body->GetAngle());
-	}
-	else if (_body->GetPosition().y < -0.05)
-	{
-		_body->SetTransform(b2Vec2(_body->GetPosition().x, 18.0f), _body->GetAngle());
-	}
-	//----------------------------------------------------------------------------------
+	
 }
 
 void Homura::draw(Bengine::SpriteBatch& spriteBatch){
@@ -166,6 +175,8 @@ void Homura::draw(Bengine::SpriteBatch& spriteBatch){
 			TheMainGame::Instance()->_camera.getScreenDimensions().x / 16.7320261438, TheMainGame::Instance()->_camera.getScreenDimensions().y / 36), 0.0f, uv, manaBarFrame.id, 0.0f, color);
 
 		//---------------------------------------------------------------------------------------------------------------------
+
+		_manaShield->draw(spriteBatch, _body->GetPosition().x, _body->GetPosition().y);
 		_currentState->draw(spriteBatch, _body);
 		_mainWeaponState->draw(spriteBatch, _body->GetPosition().x, _body->GetPosition().y);
 	}

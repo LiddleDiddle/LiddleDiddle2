@@ -15,14 +15,16 @@ public:
 	void kill() { _alive = false; }
 	bool living() { return _alive; }
 	float _mana;
-
+	bool getManaShield() { return _active; }
 	int numFootContact = 0;
 protected:
 	CharacterState* _currentState;
 	WeaponState* _mainWeaponState;
+	WeaponState* _manaShield;
 	bool _alive;
 	b2Body* _body;
 	b2World* _world;
+	bool _active;
 	int _controllerNumber;
 	float previousMana;
 };

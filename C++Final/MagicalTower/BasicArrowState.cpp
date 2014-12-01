@@ -35,7 +35,7 @@ WeaponState* BasicArrowState::update(float x, float y, int controllerNumber, flo
 
 	arrowSpeed = 1500;
 
-	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER) && _magnitude >= 0.2 && mana >= 25)
+	if (GENERAL_MANAGER->_players[GENERAL_MANAGER->_joinedPlayers[controllerNumber]].isKeyPressed(SDL_CONTROLLER_BUTTON_LEFTSTICK) && _magnitude >= 0.2 && mana >= 25)
 	{
 		glm::vec2 temp = glm::normalize(rightStick);
 		arrows.push_back(new Arrow(x + (temp.x * 1.5f),y + (temp.y * 1.7f), b2Vec2(temp.x * arrowSpeed, temp.y * arrowSpeed)));

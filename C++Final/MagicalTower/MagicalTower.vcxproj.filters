@@ -198,6 +198,9 @@
     <ClCompile Include="SayakaAir.cpp">
       <Filter>Character\Sayaka</Filter>
     </ClCompile>
+    <ClCompile Include="ManaShield.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h">
@@ -367,6 +370,9 @@
     </ClInclude>
     <ClInclude Include="SayakaAir.h">
       <Filter>Character\Sayaka</Filter>
+    </ClInclude>
+    <ClInclude Include="ManaShield.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

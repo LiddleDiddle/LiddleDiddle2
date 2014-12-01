@@ -54,7 +54,7 @@ private:
 	std::vector<GameObject*> objects;
 	b2Body* m_groundBody;
 	WrekTangle wrek;
-
+	float _manaOrbSpawnTimer;
 	Bengine::SpriteBatch _fontSpriteBatch;
 	Bengine::SpriteFont* _spriteFont;
 	bool gameOver, check;

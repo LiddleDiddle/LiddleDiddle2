@@ -27,6 +27,7 @@ void IntroGameState::Draw(Bengine::SpriteBatch& spriteBatch)
 {
 
 	glm::vec4 uv(0.0f, 0.0f, 1.0f, 1.0f);
+	Bengine::ResourceManager::getTexture("Textures/Character/betterManaShield.png");
 	static Bengine::GLTexture bg = Bengine::ResourceManager::getTexture("Textures/Character/character.png");
 	static Bengine::GLTexture logo = Bengine::ResourceManager::getTexture("Textures/Logo.png");
 	Bengine::ColorRGBA8 color;

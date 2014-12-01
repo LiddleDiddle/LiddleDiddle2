@@ -7,6 +7,7 @@
 #include "LevelWall.h"
 #include "Ball.h"
 #include "ControllerMenuState.h"
+#include "ManaOrb.h"
 
 #define WIDTH 32
 #define HEIGHT 18
@@ -27,6 +28,7 @@ void LevelState::Entered() {
 	gameOver = false;
 	check = false;
 	theWinner = 0;
+	_manaOrbSpawnTimer = 0;
 	// assign characters to players ---------------------------------------------------
 	for (int i = 0; i < GENERAL_MANAGER->_joinedPlayers.size(); i++)
 	{
@@ -70,8 +72,8 @@ void LevelState::Entered() {
 	case 4:
 		_characters[0]->init(0, 6, 14, world);
 		_characters[1]->init(1, 27, 14, world);
-		_characters[3]->init(2, 6, 3, world);
-		_characters[4]->init(3, 27, 3, world);
+		_characters[2]->init(2, 6, 3, world);
+		_characters[3]->init(3, 27, 3, world);
 		break;
 	default:
 		break;
@@ -115,6 +117,7 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 	}
 	
 
+
 	for (int i = 0; i < items.size(); i++)
 	{
 		if (items[i]->living())
@@ -126,6 +129,12 @@ void LevelState::Update(float elapsedTime, Bengine::InputManager& _inputManager)
 			items.erase(items.begin() + i);
 			i = 0;
 		}
+	}
+
+	if ((_manaOrbSpawnTimer += 0.01666666) >= 5)
+	{
+		items.push_back(new ManaOrb(16, 9, 25));
+		_manaOrbSpawnTimer = 0;
 	}
 
 }
@@ -225,15 +234,15 @@ void LevelState::Draw(Bengine::SpriteBatch& spriteBatch)
 		if (!_characters[i]->living())
 		{
 			losers++;
-			gameOver = true;
 		}
 	}
-	if (gameOver && !check)
+	if (losers >= _characters.size() - 1 && !check)
 	{
 		for (int i = 0; i < _characters.size(); i++)
 		{
 			if (_characters[i]->living())
 			{
+				gameOver = true;
 				theWinner = i;
 				check = true;
 			}
