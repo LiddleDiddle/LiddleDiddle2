@@ -1,19 +1,156 @@
-﻿Build started 12/1/2014 2:35:56 PM.
+﻿Build started 12/16/2014 7:08:33 PM.
      1>Project "C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\MagicalTower\MagicalTower.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _RELEASE /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt HomuraGround.cpp MamiGround.cpp SayakaGround.cpp StandingState.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _RELEASE /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Arrow.cpp Ball.cpp BasicArrowState.cpp BasicState.cpp Box.cpp Bullet.cpp ControllerMenuState.cpp DefaultGameStateManager.cpp Drawable.cpp GameObject.cpp GameState.cpp GameStateManager.cpp GameStateProvider.cpp GeneralManager.cpp Ground.cpp Homura.cpp HomuraAir.cpp HomuraGround.cpp IntroGameState.cpp Item.cpp JumpingState.cpp Level.cpp LevelLoader.cpp LevelState.cpp LevelWall.cpp MainGame.cpp MainMenuGameState.cpp MainMenuState.cpp Mami.cpp MamiAir.cpp MamiGround.cpp ManaOrb.cpp ManaShield.cpp Modality.cpp MultiCharacterSelectState.cpp MyContactListener.cpp Pendulum.cpp PhysicsTile.cpp Player.cpp RemedyMenuState.cpp Sayaka.cpp SayakaAir.cpp SayakaGround.cpp Seesaw.cpp StageSelectState.cpp StandingState.cpp StartScreenState.cpp TilemapEditorState.cpp TylerMenuState.cpp Updateable.cpp WrekTangle.cpp main.cpp tinyxml2.cpp wall.cpp
+         wall.cpp
+         tinyxml2.cpp
+         main.cpp
+         WrekTangle.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\wrektangle.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\wrektangle.cpp(84): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+         Updateable.cpp
+         TylerMenuState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\tylermenustate.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+         TilemapEditorState.cpp
+         StartScreenState.cpp
          StandingState.cpp
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\standingstate.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\standingstate.cpp(54): warning C4305: '+=' : truncation from 'double' to 'float'
+         StageSelectState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\stageselectstate.cpp(67): warning C4018: '>' : signed/unsigned mismatch
+         Seesaw.cpp
          SayakaGround.cpp
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayakaground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayakaground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+         SayakaAir.cpp
+         Sayaka.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayaka.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\sayaka.cpp(83): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+         RemedyMenuState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(28): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(64): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(75): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\remedymenustate.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+         Player.cpp
+         PhysicsTile.cpp
+         Pendulum.cpp
+         MyContactListener.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         MultiCharacterSelectState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(191): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(195): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\multicharacterselectstate.cpp(199): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+         Compiling...
+         Modality.cpp
+         ManaShield.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\manashield.cpp(15): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\manashield.cpp(23): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\manashield.cpp(30): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\manashield.cpp(41): warning C4244: 'argument' : conversion from 'float' to 'GLubyte', possible loss of data
+         ManaOrb.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          MamiGround.cpp
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mamiground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mamiground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+         MamiAir.cpp
+         Mami.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mami.cpp(44): warning C4305: 'argument' : truncation from 'double' to 'float32'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\mami.cpp(83): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+         MainMenuState.cpp
+         MainMenuGameState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         MainGame.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\maingame.cpp(133): warning C4244: 'argument' : conversion from 'Sint32' to 'float', possible loss of data
+         LevelWall.cpp
+         LevelState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7): warning C4099: 'Bengine::GLTexture' : type name first seen using 'class' now seen using 'struct'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(33): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(99): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(121): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(134): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(167): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(172): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(232): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(239): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(241): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\levelstate.cpp(251): warning C4018: '>=' : signed/unsigned mismatch
+         LevelLoader.cpp
+         Level.cpp
+         JumpingState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\jumpingstate.cpp(55): warning C4305: '+=' : truncation from 'double' to 'float'
+         Item.cpp
+         IntroGameState.cpp
          HomuraGround.cpp
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homuraground.cpp(41): warning C4305: '+=' : truncation from 'double' to 'float'
      1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homuraground.cpp(53): warning C4305: '+=' : truncation from 'double' to 'float'
+         HomuraAir.cpp
+         Homura.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homura.cpp(45): warning C4305: 'argument' : truncation from 'double' to 'float32'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\homura.cpp(85): warning C4244: '=' : conversion from 'float' to 'GLubyte', possible loss of data
+         Ground.cpp
+         Generating Code...
+         Compiling...
+         GeneralManager.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\generalmanager.cpp(15): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\generalmanager.cpp(45): warning C4018: '<' : signed/unsigned mismatch
+         GameStateProvider.cpp
+         GameStateManager.cpp
+         GameState.cpp
+         GameObject.cpp
+         Drawable.cpp
+         DefaultGameStateManager.cpp
+         ControllerMenuState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(38): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\controllermenustate.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+         Bullet.cpp
+         Box.cpp
+         BasicState.cpp
+         BasicArrowState.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(15): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(17): warning C4804: '>' : unsafe use of type 'bool' in operation
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(27): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(34): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\basicarrowstate.cpp(58): warning C4018: '<' : signed/unsigned mismatch
+         Ball.cpp
+         Arrow.cpp
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.h(19): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\spritefont.h(36): warning C4099: 'Bengine::GLTexture' : type name first seen using 'struct' now seen using 'class'
+                 c:\users\zephyr\documents\github\liddlediddle2\c++final\bengine\gltexture.h(7) : see declaration of 'Bengine::GLTexture'
+     1>c:\users\zephyr\documents\github\liddlediddle2\c++final\magicaltower\arrow.cpp(38): warning C4244: '=' : conversion from 'double' to 'float32', possible loss of data
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.exe" /INCREMENTAL /NOLOGO glew32.lib glew32s.lib SDL2.lib SDL2main.lib SDL2_ttf.lib OpenGL32.lib liquidfun.lib Bengine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.lib" /MACHINE:X86 Debug\Arrow.obj
@@ -70,9 +207,62 @@
          Debug\Updateable.obj
          Debug\wall.obj
          Debug\WrekTangle.obj
+         LINK : C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.exe not found or not built by the last incremental link; performing full link
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>liquidfun.lib(b2DistanceJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2DistanceJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2FrictionJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2FrictionJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2GearJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2GearJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Joint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Joint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2MotorJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2MotorJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2MouseJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2MouseJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2PrismaticJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PrismaticJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2PulleyJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PulleyJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2RevoluteJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2RevoluteJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2RopeJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2RopeJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2WeldJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WeldJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2WheelJoint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WheelJoint.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2CircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Contact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Contact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ContactSolver.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ContactSolver.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2PolygonAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2EdgeAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2EdgeAndPolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeAndPolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ChainAndCircleContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainAndCircleContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ChainAndPolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainAndPolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2PolygonContact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonContact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Body.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Body.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ContactManager.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ContactManager.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Fixture.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Fixture.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Island.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Island.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2World.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2World.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2WorldCallbacks.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2WorldCallbacks.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2BlockAllocator.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2BlockAllocator.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Draw.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Draw.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2FreeList.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2FreeList.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Math.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Math.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Settings.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Settings.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2StackAllocator.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2StackAllocator.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Timer.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Timer.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2TrackedBlock.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2TrackedBlock.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2CircleShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CircleShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2EdgeShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2EdgeShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ChainShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ChainShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2PolygonShape.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2PolygonShape.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2BroadPhase.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2BroadPhase.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2CollideCircle.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollideCircle.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2CollideEdge.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollideEdge.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2CollidePolygon.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2CollidePolygon.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Collision.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Collision.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Distance.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Distance.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2DynamicTree.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2DynamicTree.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2TimeOfImpact.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2TimeOfImpact.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2Particle.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2Particle.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ParticleGroup.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ParticleGroup.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2ParticleSystem.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2ParticleSystem.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
+     1>liquidfun.lib(b2VoronoiDiagram.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'liquidfun.lib(b2VoronoiDiagram.obj)' or at 'C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\vc120.pdb'; linking object as if no debug info
          MagicalTower.vcxproj -> C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\Debug\MagicalTower.exe
      1>Done Building Project "C:\Users\Zephyr\Documents\GitHub\LiddleDiddle2\C++Final\MagicalTower\MagicalTower.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.84
+Time Elapsed 00:01:04.94
